@@ -1,0 +1,2 @@
+if ( = = <%> <*> fmy - 1 -> 0 </%> ) { if ( ! periodic ) continue ; else = <%> <*> 0 -> fmy - 1 </%> ; } else = <%> <*> + -> - </%> 1 ;
+<%> <*> protected bool [ ] [ ] [ ] wave ; protected bool [ ] [ ] changes ; -> protected bool [ ] [ ] wave ; </%>

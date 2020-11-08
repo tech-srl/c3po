@@ -1,0 +1,2 @@
+}\nelse if (d == 2)\n{\nif (x2 == FMX - 1)\n{\nif (!periodic) continue;\nelse x1 = 0;\n}\nelse x1 = x2 + 1;\n}
+protected double[] stationary;\nprotected int[][] observed;\nprotected Random random;\nprotected int FMX, FMY, T, limit;\nprotected bool periodic;\ndouble[] logProb;

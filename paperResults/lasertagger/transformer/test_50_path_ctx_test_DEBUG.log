@@ -1,0 +1,13 @@
+[2020-05-08 16:21:53,271] DEBUG:__main__:CUDA is available
+[2020-05-08 16:21:53,271] DEBUG:__main__:APEX is available
+[2020-05-08 16:21:53,271] DEBUG:__main__:Namespace(accum_grad=1, batch_size=32, checkpoint='checkpoints/test_50_path_ctx.pt', context_mode='path', cuda=True, data='dataset_50_Laser/', debug=False, disable_prog_bar=False, dropout=0.25, early_stopping=10, expname='test_50_path_ctx_test', hidden_dim=128, inference=True, input_dim=64, lr=0.001, momentum=0, num_of_layers=2, num_workers=2, optim='adam', pin_memory=False, save='checkpoints/', seed=123, sparse=False, wd=0)
+[2020-05-08 16:21:53,272] DEBUG:__main__:==> source vocabulary size:       524 
+[2020-05-08 16:21:53,273] DEBUG:__main__:==> target vocabulary size:       524 
+[2020-05-08 16:21:53,273] DEBUG:__main__:==> ctx vocabulary size:          524 
+[2020-05-08 16:21:55,219] DEBUG:__main__:==> Size of train data:           36548 
+[2020-05-08 16:21:55,724] DEBUG:__main__:==> Size of dev data:             4080 
+[2020-05-08 16:21:55,892] DEBUG:__main__:==> Size of test data:            5278 
+[2020-05-08 16:21:55,905] DEBUG:__main__:==> Total trainable parameters:   997980 
+[2020-05-08 16:21:57,896] DEBUG:__main__:==> Loading checkpoint "checkpoints/test_50_path_ctx.pt" from disk
+[2020-05-08 16:21:57,921] DEBUG:__main__:==> Running inference on test set
+[2020-05-08 16:22:27,277] INFO:__main__:==> Epoch 28, Test		Acc: 0.444

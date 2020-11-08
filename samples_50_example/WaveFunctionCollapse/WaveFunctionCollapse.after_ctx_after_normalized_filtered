@@ -1,0 +1,2 @@
+} else if ( d = = 2 ) { if ( = = 0 ) { if ( ! periodic ) continue ; else = fmx - 1 ; } else = - 1 ; }
+protected double [ ] stationary ; protected int [ ] observed ; protected bool [ ] changes ; protected int [ ] stack ; protected int stacksize ; protected random random ; protected int fmx , fmy , t ; protected bool periodic ; double [ ] log _ prob ;

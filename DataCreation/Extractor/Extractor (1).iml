@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="MavenCustomPomFilePath">
+    <option name="mavenPomFileUrl" value="file://$MODULE_DIR$/dependency-reduced-pom.xml" />
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$/src/main/java">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="Maven: com.github.gumtreediff:core:2.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.atteo.classindex:classindex:3.4" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.mpkorstanje:simmetrics-core:3.2.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: commons-codec:commons-codec:1.10" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: net.sf.trove4j:trove4j:3.0.3" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.jgrapht:jgrapht-core:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.gumtreediff:client:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.github.gumtreediff:gen.javaparser:2.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.javaparser:javaparser-symbol-solver-core:3.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.javaparser:javaparser-symbol-solver-logic:3.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.javassist:javassist:3.24.0-GA" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.javaparser:javaparser-symbol-solver-model:3.13.1" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: com.github.javaparser:javaparser-core:3.13.1" level="project" />
+    <orderEntry type="library" name="Maven: com.github.gumtreediff:gen.jdt:2.1.2" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.jdt:org.eclipse.jdt.core:3.16.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.resources:3.13.800" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.expressions:3.7.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.runtime:3.19.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.osgi:3.16.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.equinox.common:3.13.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.jobs:3.10.800" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.equinox.registry:3.9.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.equinox.preferences:3.8.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.contenttype:3.7.800" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.equinox.app:1.5.0" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.filesystem:1.7.700" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.text:3.10.300" level="project" />
+    <orderEntry type="library" scope="RUNTIME" name="Maven: org.eclipse.platform:org.eclipse.core.commands:3.9.700" level="project" />
+    <orderEntry type="library" name="Maven: com.github.gumtreediff:gen.srcml:2.1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.gson:gson:2.8.5" level="project" />
+    <orderEntry type="library" name="Maven: org.javatuples:javatuples:1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.kohsuke.args4j:args4j-maven-plugin:2.33" level="project" />
+    <orderEntry type="library" name="Maven: args4j:args4j-tools:all:2.33" level="project" />
+    <orderEntry type="library" name="Maven: args4j:args4j:2.33" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: jdk:tools:5.0">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../../../Program Files/Java/jdk1.8.0_201/lib/tools.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-project:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-settings:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-profile:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-model:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact-manager:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-repository-metadata:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven.wagon:wagon-provider-api:1.0-alpha-6" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-utils:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-artifact:2.0.4" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.plexus:plexus-container-default:1.0-alpha-9" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:3.8.1" level="project" />
+    <orderEntry type="library" name="Maven: classworlds:classworlds:1.1-alpha-2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.maven:maven-plugin-api:2.0" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:guava:29.0-jre" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:failureaccess:1.0.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.guava:listenablefuture:9999.0-empty-to-avoid-conflict-with-guava" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: org.checkerframework:checker-qual:2.11.1" level="project" />
+    <orderEntry type="library" name="Maven: com.google.errorprone:error_prone_annotations:2.3.4" level="project" />
+    <orderEntry type="library" name="Maven: com.google.j2objc:j2objc-annotations:1.3" level="project" />
+  </component>
+</module>

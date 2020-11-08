@@ -1,0 +1,13 @@
+[2020-05-04 04:53:19,140] DEBUG:__main__:CUDA is available
+[2020-05-04 04:53:19,140] DEBUG:__main__:APEX is available
+[2020-05-04 04:53:19,140] DEBUG:__main__:Namespace(accum_grad=1, attention=False, batch_size=64, context_mode='none', cuda=True, data='data_50/', debug=False, disable_prog_bar=False, dropout=0.25, early_stopping=10, expname='test_50_no_ctx_test', hidden_dim=512, inference=True, input_dim=128, load_checkpoint='checkpoints/test_50_no_ctx.pt', lr=0.001, max_seq_len=20, momentum=0, num_of_layers=2, num_workers=6, optim='adam', pin_memory=False, save='checkpoints/', seed=123, shuffle_path=False, wd=0)
+[2020-05-04 04:53:19,142] DEBUG:__main__:==> path vocabulary size:         89 
+[2020-05-04 04:53:19,142] DEBUG:__main__:==> src_tgt vocabulary size:      524 
+[2020-05-04 04:53:19,142] DEBUG:__main__:==> position vocabulary size:     52 
+[2020-05-04 04:53:19,218] DEBUG:__main__:==> Size of train data:           39493 
+[2020-05-04 04:53:19,227] DEBUG:__main__:==> Size of dev data:             4468 
+[2020-05-04 04:53:19,238] DEBUG:__main__:==> Size of test data:            5934 
+[2020-05-04 04:53:19,323] DEBUG:__main__:==> Total trainable parameters:   9672320 
+[2020-05-04 04:53:22,077] DEBUG:__main__:==> Loading checkpoint "checkpoints/test_50_no_ctx.pt" from disk
+[2020-05-04 04:53:22,137] DEBUG:__main__:==> Running inference on test set
+[2020-05-04 04:58:23,050] INFO:__main__:==> Epoch 54, Test		Loss: 7.568	Acc: 0.465	Precision: 0.570	Recall: 0.510	F1: 0.539

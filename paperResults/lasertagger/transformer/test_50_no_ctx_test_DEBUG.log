@@ -1,0 +1,11 @@
+[2020-05-08 06:33:20,827] DEBUG:__main__:Namespace(accum_grad=1, batch_size=32, checkpoint='checkpoints/test_50_no_ctx.pt', context_mode='none', cuda=False, data='dataset_50_Laser/', debug=False, disable_prog_bar=False, dropout=0.25, early_stopping=10, expname='test_50_no_ctx_test', hidden_dim=128, inference=True, input_dim=64, lr=0.001, momentum=0, num_of_layers=2, num_workers=2, optim='adam', pin_memory=False, save='checkpoints/', seed=123, sparse=False, wd=0)
+[2020-05-08 06:33:20,828] DEBUG:__main__:==> source vocabulary size:       524 
+[2020-05-08 06:33:20,828] DEBUG:__main__:==> target vocabulary size:       524 
+[2020-05-08 06:33:20,829] DEBUG:__main__:==> ctx vocabulary size:          524 
+[2020-05-08 06:33:22,744] DEBUG:__main__:==> Size of train data:           36548 
+[2020-05-08 06:33:23,235] DEBUG:__main__:==> Size of dev data:             4080 
+[2020-05-08 06:33:23,401] DEBUG:__main__:==> Size of test data:            5278 
+[2020-05-08 06:33:23,414] DEBUG:__main__:==> Total trainable parameters:   997980 
+[2020-05-08 06:33:23,414] DEBUG:__main__:==> Loading checkpoint "checkpoints/test_50_no_ctx.pt" from disk
+[2020-05-08 06:33:23,435] DEBUG:__main__:==> Running inference on test set
+[2020-05-08 06:40:44,181] INFO:__main__:==> Epoch 34, Test		Acc: 0.399

@@ -1,0 +1,2 @@
+} else if ( d = = 2 ) { if ( = = fmx - 1 ) { if ( ! periodic ) continue ; else = 0 ; } else = + 1 ; }
+protected double [ ] stationary ; protected int [ ] [ ] observed ; protected random random ; protected int fmx , fmy , t , limit ; protected bool periodic ; double [ ] log _ prob ;

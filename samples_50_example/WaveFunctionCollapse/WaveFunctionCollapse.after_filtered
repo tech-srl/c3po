@@ -1,0 +1,2 @@
+if (y1 == 0)\n{\nif (!periodic) continue;\nelse y2 = FMY - 1;\n}\nelse y2 = y1 - 1;
+protected bool[][] wave;

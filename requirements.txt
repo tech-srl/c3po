@@ -1,0 +1,6 @@
+tqdm
+gitpython
+OpenNMT-py
+Pygments
+biopython
+scipy

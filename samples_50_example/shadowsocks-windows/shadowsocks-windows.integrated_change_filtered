@@ -1,0 +1,95 @@
+<%> <*> system . io . file _ stream file _ stream = new system . io . file _ stream ( file _ name , system . io . file _ mode . create , system . io . file _ access . write ) ; -> file _ stream file _ stream = new file _ stream ( file _ name , file _ mode . create , file _ access . write ) ; </%>
+<%> <*> var -> object [ ] </%> states = ( object [ ] ) ar . async _ state ;
+<%> <*> var -> action </%> on _ success = ( action ) states [ 1 ] ;
+<%> <*> var -> async _ session </%> session = new async _ session ( remote ) ;
+<%> <*> var -> proxy _ timer </%> timer = ( proxy _ timer ) sender ;
+<%> <*> var -> async _ session < proxy _ timer > </%> session = ( async _ session < proxy _ timer > ) ar . async _ state ;
+<%> <*> var -> server _ timer </%> timer = ( server _ timer ) sender ;
+<%> <*> if ( closed ) return ; -> if ( closed ) { return ; </%> <%> <+> } </%> try { <%> <*> var -> async _ session < server _ timer > </%> session = ( async _ session < server _ timer > ) ar . async _ state ;
+<%> <*> if ( closed ) return ; -> if ( closed ) { return ; </%> <%> <+> } </%> try { <%> <*> var -> async _ session </%> session = ( async _ session ) ar . async _ state ;
+<%> <-> { </%> close ( ) ; <%> <-> } </%>
+running _ port = <%> <-> this . </%> get _ free _ port ( ) ;
+if ( <%> <*> string -> password </%> . is _ null _ or _ empty ( <%> <-> password </%> ) )
+if ( <%> <*> string -> server </%> . is _ null _ or _ empty ( <%> <-> server </%> ) )
+if ( <%> <*> string -> server </%> . is _ null _ or _ empty ( <%> <-> server </%> ) )
+if ( <%> <*> string -> remarks </%> . is _ null _ or _ empty ( <%> <-> remarks </%> ) )
+<%> <*> if ( string . is _ null _ or _ empty -> if </%> ( controller . get _ configuration _ copy ( ) . pac _ url <%> <+> . is _ null _ or _ empty ( </%> ) )
+if ( ! <%> <-> string . is _ null _ or _ empty ( </%> controller . get _ configuration _ copy ( ) . pac _ url <%> <+> . is _ null _ or _ empty ( </%> ) )
+<%> <*> string temppath = utils . get _ temp _ path ( ) ; log _ file = path . combine ( temppath , STR ) ; -> log _ file = utils . get _ temp _ path ( STR ) ; </%>
+<%> <*> total _ write + = bytes _ read ; var session = ( async _ session < bool > ) ar . async _ state ; -> var session = ( async _ session ) ar . async _ state ; </%>
+console . write _ line ( e <%> <-> . message </%> ) ;
+menu _ item item = new menu _ item <%> <-> ( n . get _ string </%> ( strategy . name <%> <-> ) </%> ) ;
+<%> <-> if ( buffer = = first _ packge ) { buffer _ data _ index = index ; } else { </%> array . copy ( first _ packge , index , line _ buffer , 0 , length ) ; <%> <-> } </%>
+<%> <-> else { file _ manager . uncompress _ file ( pac _ file , resources . proxy _ pac _ txt ) ; </%> return pac _ file ; <%> <-> } </%>
+<%> <*> return utils . un _ gzip ( -> return </%> resources . proxy _ pac _ txt <%> <-> ) </%> ;
+lines = new <%> <-> string </%> [ ] { data _ line } ;
+<%> <-> this . </%> server = server ;
+<%> <*> var -> object [ ] </%> states = ( object [ ] ) ar . async _ state ;
+<%> <*> var -> action </%> on _ success = ( action ) states [ 1 ] ;
+<%> <*> var -> proxy _ timer </%> timer = ( proxy _ timer ) sender ;
+<%> <*> var -> async _ session < proxy _ timer > </%> session = ( async _ session < proxy _ timer > ) ar . async _ state ;
+<%> <*> var -> server _ timer </%> timer = ( server _ timer ) sender ;
+<%> <*> if ( closed ) return ; -> if ( closed ) { return ; </%> <%> <+> } </%> try { <%> <*> var -> async _ session < server _ timer > </%> session = ( async _ session < server _ timer > ) ar . async _ state ;
+<%> <*> if ( closed ) return ; -> if ( closed ) { return ; </%> <%> <+> } </%> try { <%> <*> var -> async _ session </%> session = ( async _ session ) ar . async _ state ;
+<%> <-> this . </%> encryptor = encryptor _ factory . get _ encryptor ( server . method , server . password , server . auth , false ) ;
+<%> <-> this . </%> first _ packet = first _ packet ; <%> <-> this . </%> first _ packet _ length = length ; <%> <-> this . </%> handshake _ receive ( ) ; <%> <-> this . </%> last _ activity = date _ time . now ;
+<%> <-> this . </%> close ( ) ;
+<%> <-> this . </%> close ( ) ; } } catch ( exception e ) { logging . log _ useful _ exception ( e ) ; <%> <-> this . </%> close ( ) ;
+<%> <-> this . </%> close ( ) ; } } } catch ( exception e ) { logging . log _ useful _ exception ( e ) ; <%> <-> this . </%> close ( ) ;
+<%> <-> this . </%> close ( ) ;
+<%> <-> this . </%> last _ activity = date _ time . now ;
+strategy . update _ last _ read ( <%> <-> this . </%> server ) ;
+strategy . update _ last _ write ( <%> <-> this . </%> server ) ;
+<%> <*> lock ( encryption _ lock ) { lock ( decryption _ lock ) { encryptor = encryptor _ factory . get _ encryptor ( server . method , server . password , server . auth , false ) ; } } -> encryptor = encryptor _ factory . get _ encryptor ( server . method , server . password ) ; </%>
+<%> <-> new async _ callback ( </%> response _ callback <%> <-> ) </%> , null ) ;
+connection . begin _ send ( response , 0 , response . length , socket _ flags . none , <%> <-> new async _ callback ( </%> read _ all <%> <-> ) </%> , true ) ;
+<%> <*> connection . begin _ receive ( connetion _ recv _ buffer , 0 , recv _ size , socket _ flags . none , new async _ callback ( read _ all ) , null ) ; -> connection . begin _ receive ( connetion _ recv _ buffer , 0 , recv _ size , socket _ flags . none , </%> <%> <+> read _ all , null ) ; </%>
+<%> <*> connection . begin _ receive ( connetion _ recv _ buffer , 0 , recv _ size , socket _ flags . none , new async _ callback ( read _ all ) , null ) ; -> connection . begin _ receive ( connetion _ recv _ buffer , 0 , recv _ size , socket _ flags . none , </%> <%> <+> read _ all , null ) ; </%>
+<%> <*> remote . begin _ connect _ dest ( dest _ end _ point , new async _ callback ( connect _ callback ) , new async _ session < server _ timer > ( session , connect _ timer ) ) ; -> remote . begin _ connect _ dest ( dest _ end _ point , connect _ callback , </%> <%> <+> new async _ session < server _ timer > ( session , connect _ timer ) ) ; </%>
+this . my _ cancel _ button . margin = new system . windows . forms . padding ( NUM , NUM , <%> <*> 0 -> NUM </%> , 0 ) ;
+package _ loss = response _ records . count ( response = > response ! = null ) / ( float ) response _ records . count <%> <-> ( ) </%> ;
+all _ text _ boxes = <%> <*> hot -> table _ layout </%> _ <%> <*> keys -> panel </%> . get _ child _ controls < text _ box > ( <%> <-> this . table _ layout _ panel </%> ) ;
+<%> <-> this . </%> text = n . get _ string ( STR ) ;
+<%> <-> this . </%> close ( ) ;
+<%> <-> try </%> <%> <*> { -> socket listener = ( socket ) ar . async _ state ; </%> <%> <*> socket listener = ( socket ) ar . async _ state ; -> try </%> <%> <+> { </%>
+<%> <-> try </%> <%> <*> { -> socket listener = ( socket ) ar . async _ state ; </%> <%> <*> socket listener = ( socket ) ar . async _ state ; -> try </%> <%> <+> { </%>
+<%> <-> sodium . </%> ss _ onetimeauth ( auth , buf , head _ len , encrypt _ iv , iv _ len , key , key _ len ) ;
+<%> <-> this . </%> font = system _ fonts . message _ box _ font ;
+<%> <-> this . </%> servers _ list _ box . dock = dock _ style . fill ; <%> <-> this . </%> table _ layout _ panel . dock = dock _ style . fill ; <%> <-> this . </%> perform _ layout ( ) ;
+<%> <-> this . </%> icon = icon . from _ handle ( resources . ssw . get _ hicon ( ) ) ;
+tool _ tip . set _ tool _ tip ( <%> <-> this . </%> portable _ mode _ check _ box , n . get _ string ( STR ) ) ;
+<%> <-> this . </%> text = n . get _ string ( STR ) ;
+<%> <-> if ( read _ proxy _ server ! = null & & read _ proxy _ server . equals ( STR + config . local _ port . to _ string ( ) ) ) </%> registry . set _ value ( STR , STR ) ;
+<%> <-> if ( global ) { </%> registry . set _ value ( STR , STR ) ; <%> <-> } </%>
+<%> <-> this . </%> method = parts [ 0 ] ; <%> <-> this . </%> password = parts [ 1 ] ;
+console . write _ line ( e <%> <-> . message </%> ) ;
+color fly _ blue = color . from _ argb ( <%> <+> NUM , </%> NUM , NUM , NUM ) ;
+<%> <*> using raw _ statistics = dictionary < string , list < availability _ statistics . raw _ statistics _ data > > ; using statistics = dictionary < string , list < availability _ statistics . statistics _ data > > ; -> using statistics = dictionary < string , list < availability _ statistics . raw _ statistics _ data > > ; </%>
+<%> <*> var old _ server = current _ server ; if ( old _ server = = null ) -> if ( current _ server = = null ) </%>
+<%> <-> this . context _ menu _ strip = new system . windows . forms . context _ menu _ strip ( this . components ) ; </%> this . main _ menu = new system . windows . forms . main _ menu ( this . components ) ;
+<%> <-> private system . windows . forms . context _ menu _ strip context _ menu _ strip ; </%> private system . windows . forms . main _ menu main _ menu ;
+<%> <-> this . </%> target _ port = target _ port ;
+new handler ( ) . start ( first _ packet , length , socket , <%> <-> this . </%> target _ port ) ;
+<%> <-> this . </%> close ( ) ;
+<%> <-> new async _ callback ( </%> pipe _ remote _ receive _ callback <%> <-> ) </%> , null ) ;
+<%> <-> new async _ callback ( </%> pipe _ connection _ receive _ callback <%> <-> ) </%> , null ) ; } catch ( exception e ) { logging . log _ useful _ exception ( e ) ; <%> <-> this . </%> close ( ) ;
+<%> <-> this . </%> close ( ) ;
+<%> <-> mbed _ tls . </%> md ( input , ( uint ) input . length , output ) ;
+<%> <-> this . context _ menu _ strip = new system . windows . forms . context _ menu _ strip ( this . components ) ; </%> this . main _ menu = new system . windows . forms . main _ menu ( this . components ) ;
+<%> <-> private system . windows . forms . context _ menu _ strip context _ menu _ strip ; </%> private system . windows . forms . main _ menu main _ menu ;
+<%> <-> if ( bytes _ read > 0 ) { </%> string text = string . format ( @ STR
+<%> <-> string proxy = STR + local _ end _ point . address + STR ; </%>              <%> <*> return proxy ; -> return STR + local _ end _ point . address + STR ; </%>
+if ( e is socket _ exception <%> <+> se </%> ) { <%> <-> socket _ exception se = ( socket _ exception ) e ; </%>
+bool parsed = ip _ address . try _ parse ( <%> <*> config -> server </%> . server , out ip _ address ) ;
+ip _ host _ entry ip _ host _ info = dns . get _ host _ entry ( <%> <*> config -> server </%> . server ) ;
+<%> <-> new task ( ( ) = > </%> availability _ statistics . update _ latency ( server , ( int ) latency . total _ milliseconds <%> <-> ) ) . start ( </%> ) ;
+<%> <-> new task ( ( ) = > </%> availability _ statistics . update _ inbound _ counter ( server , n <%> <-> ) ) . start ( </%> ) ;
+<%> <-> new task ( ( ) = > </%> availability _ statistics . update _ outbound _ counter ( server , n <%> <-> ) ) . start ( </%> ) ;
+public <%> <-> extern </%> static <%> <+> extern </%> void ss _ sha _ hmac _ ex ( byte [ ] key , uint keylen ,
+controller . get _ current _ strategy ( ) . update _ latency ( <%> <-> this . </%> server , latency ) ;
+<%> <*> registry _ key reg _ hkcu = registry . current _ user ; registry _ key reg _ themes _ personalize = reg _ hkcu . open _ sub _ key ( STR , false ) ; -> registry _ key reg _ themes _ personalize = registry . current _ user . open _ sub _ key ( STR , false ) ; </%>
+retval = <%> <-> ras . </%> ras _ enum _ entries ( null , null , names , ref lp _ size , out lp _ names ) ;
+<%> <-> lock ( locker ) { </%> encryptor = new polar _ ssl _ encryptor ( STR , STR ) ; decryptor = new polar _ ssl _ encryptor ( STR , STR ) ; <%> <-> } </%>
+polipo _ runner . start ( config <%> <-> . get _ current _ server ( ) </%> ) ; local = new local ( config <%> <-> . get _ current _ server ( ) </%> ) ;
+<%> <-> if ( ! int . try _ parse ( locs [ 1 ] , out target _ port ) ) { </%> throw new exception ( STR + line ) ; <%> <-> } } else { target _ port = NUM ; </%>
+<%> <-> if ( ! int . try _ parse ( locs [ 1 ] , out target _ port ) ) { </%> throw new exception ( STR + line ) ; <%> <-> } } else { target _ port = NUM ; </%>

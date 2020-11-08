@@ -1,0 +1,2 @@
+}\nelse if (d == 2)\n{\nif (x1 == 0)\n{\nif (!periodic) continue;\nelse x2 = FMX - 1;\n}\nelse x2 = x1 - 1;\n}
+protected double[] stationary;\nprotected int[] observed;\nprotected bool[] changes;\nprotected int[] stack;\nprotected int stacksize;\nprotected Random random;\nprotected int FMX, FMY, T;\nprotected bool periodic;\ndouble[] logProb;

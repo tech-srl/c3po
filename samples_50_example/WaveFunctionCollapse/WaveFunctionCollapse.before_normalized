@@ -1,0 +1,128 @@
+for ( int = 0 ; < t ; + + ) if ( wave [ ] [ ] [ ] ) {
+for ( int = 0 ; < t & & ! b ; + + ) if ( wave [ ] [ ] [ ] ) b = propagator [ d ] [ ] [ ] ;
+{ propagator [ t ] = new int [ 2 * n - 1 ] [ ] [ ] ; for ( int x = 0 ; x < 2 * n - 1 ; x + + ) { propagator [ t ] [ x ] = new int [ 2 * n - 1 ] [ ] ; for ( int y = 0 ; y < 2 * n - 1 ; y + + )
+propagator [ t ] [ x ] [ y ] = new int [ list . count ] ; for ( int c = 0 ; c < list . count ; c + + ) propagator [ t ] [ x ] [ y ] [ c ] = list [ c ] ;
+int , , sx , sy ; bool [ ] allowed ;
+sx = ; if ( sx < 0 ) sx + = fmx ; else if ( sx > = fmx ) sx - = fmx ; sy = ; if ( sy < 0 ) sy + = fmy ; else if ( sy > = fmy ) sy - = fmy ; if ( ! periodic & & ( sx + n > fmx | | sy + n > fmy ) ) continue ; allowed = wave [ sx ] [ sy ] ;
+if ( ! allowed [ ] ) continue ;
+int [ ] prop = propagator [ ] [ n - 1 - dx ] [ n - 1 - dy ] ; for ( int = 0 ; < prop . length & & ! b ; + + ) b = wave [ ] [ ] [ prop [ ] ] ;
+changes [ sx ] [ sy ] = true ;
+allowed [ ] = false ;
+stationary = temp _ stationary . to _ array ( ) ;
+propagator = new int [ NUM ] [ ] [ ] ;
+for ( int i = 0 ; i < wave . length ; i + + ) wave [ i ] = new bool [ t ] ;
+protected double [ ] stationary ;
+protected bool [ ] changes ; protected int [ ] stack ; protected int stacksize ;
+double [ ] log _ prob ; double log _ t ; protected model ( int width , int height )
+changes = new bool [ fmx * fmy ] ; stack = new int [ fmx * fmy ] ;
+protected abstract void propagate ( ) ;
+if ( on _ boundary ( i ) ) continue ; bool [ ] w = wave [ i ] ; int amount = 0 ; double sum = 0 ; for ( int t = 0 ; t < t ; t + + ) if ( w [ t ] )
+amount + = 1 ; sum + = stationary [ t ] ; } if ( sum = = 0 ) return false ;
+double entropy ; if ( amount = = 1 ) entropy = 0 ; else if ( amount = = t ) entropy = log _ t ; else { double main _ sum = 0 ; double log _ sum = math . log ( sum ) ; for ( int t = 0 ; t < t ; t + + ) if ( w [ t ] ) main _ sum + = stationary [ t ] * log _ prob [ t ] ; entropy = log _ sum - main _ sum / sum ; } if ( entropy > 0 & & entropy + noise < min )
+for ( int t = 0 ; t < t ; t + + ) distribution [ t ] = wave [ argmin ] [ t ] ? stationary [ t ] : 0 ;
+for ( int t = 0 ; t < t ; t + + ) wave [ argmin ] [ t ] = t = = r ; change ( argmin ) ;
+log _ t = math . log ( t ) ; log _ prob = new double [ t ] ; for ( int t = 0 ; t < t ; t + + ) log _ prob [ t ] = math . log ( stationary [ t ] ) ;
+protected void change ( int i )
+if ( changes [ i ] ) return ; stack [ stacksize ] = i ;
+changes [ i ] = true ;
+for ( int t = 0 ; t < t ; t + + ) wave [ i ] [ t ] = true ; changes [ i ] = false ;
+protected abstract bool on _ boundary ( int i ) ;
+stationary = new double [ t ] ; propagator = new int [ 2 * n - 1 ] [ ] [ ] [ ] ;
+stationary [ counter ] = weights [ w ] ;
+for ( int i = 0 ; i < wave . length ; i + + ) wave [ i ] = new bool [ t ] ;
+for ( int x = 0 ; x < 2 * n - 1 ; x + + )
+propagator [ x ] = new int [ 2 * n - 1 ] [ ] [ ] ; for ( int y = 0 ; y < 2 * n - 1 ; y + + ) { propagator [ x ] [ y ] = new int [ t ] [ ] ;
+for ( int = 0 ; < t ; + + ) if ( agrees ( patterns [ t ] , patterns [ ] , x - n + 1 , y - n + 1 ) ) list . add ( ) ; propagator [ x ] [ y ] [ t ] = new int [ list . count ] ; for ( int c = 0 ; c < list . count ; c + + ) propagator [ x ] [ y ] [ t ] [ c ] = list [ c ] ;
+} protected override bool on _ boundary ( int i ) = > ! periodic & & ( i % fmx + n > fmx | | i / fmx + n > fmy ) ; override protected void propagate ( ) { while ( stacksize > 0 ) { int = stack [ stacksize - 1 ] ; stacksize - - ; changes [ ] = false ; bool [ ] = wave [ ] ; int = % fmx , = / fmx ; for ( int dx = - n + 1 ; dx < n ; dx + + ) for ( int dy = - n + 1 ; dy < n ; dy + + ) { int = + dx ; if ( < 0 ) + = fmx ; else if ( > = fmx ) - = fmx ; int = + dy ; if ( < 0 ) + = fmy ; else if ( > = fmy ) - = fmy ; if ( ! periodic & & ( + n > fmx | | + n > fmy ) ) continue ; int = + * fmx ; bool [ ] = wave [ ] ; int [ ] [ ] prop = propagator [ n - 1 - dx ] [ n - 1 - dy ] ; for ( int = 0 ; < t ; + + ) if ( [ ] ) { bool b = false ; int [ ] p = prop [ ] ; for ( int l = 0 ; l < p . length & & ! b ; l + + ) b = [ p [ l ] ] ; if ( ! b ) { change ( ) ; [ ] = false ; } } } } }
+using system _ xml ;
+for ( int j = 0 ; j < a . count ( ) ; j + + ) a [ j ] = 1 ;
+for ( int j = 0 ; j < a . count ( ) ; j + + ) a [ j ] / = sum ;
+while ( i < a . count ( ) )
+public static t get < t > ( this xml _ node node , string attribute , t default _ t = default ( t ) )
+string s = ( ( xml _ element ) node ) . get _ attribute ( attribute ) ; var converter = type _ descriptor . get _ converter ( typeof ( t ) ) ; return s = = STR ? default _ t : ( t ) converter . convert _ from _ invariant _ string ( s ) ;
+using system _ xml ;
+var xdoc = new xml _ document ( ) ; xdoc . load ( $ STR ) ; xml _ node xnode = xdoc . first _ child ; tilesize = xnode . get ( STR , NUM ) ; bool unique = xnode . get ( STR , false ) ; xnode = xnode . first _ child ;
+subset = new list < string > ( ) ; foreach ( xml _ node xsubset in xnode . next _ sibling . next _ sibling . child _ nodes ) if ( xsubset . node _ type ! = xml _ node _ type . comment & & xsubset . get < string > ( STR ) = = subset _ name ) foreach ( xml _ node stile in xsubset . child _ nodes ) subset . add ( stile . get < string > ( STR ) ) ; } func < func < int , int , color > , color [ ] > tile = f = >
+func < color [ ] , color [ ] > rotate = array = > tile ( ( x , y ) = > array [ tilesize - 1 - y + x * tilesize ] ) ;
+foreach ( xml _ node xtile in xnode . child _ nodes )
+protected override bool propagate ( ) {     bool change = false , b ; for ( int = 0 ; < fmx ; + + ) for ( int = 0 ; < fmy ; + + ) for ( int d = 0 ; d < NUM ; d + + ) { int = , = ;
+if ( = = 0 ) { if ( ! periodic ) continue ; else = fmx - 1 ; } else = - 1 ;
+if ( = = fmy - 1 ) { if ( ! periodic ) continue ; else = 0 ; } else = + 1 ;
+if ( = = fmx - 1 ) { if ( ! periodic ) continue ; else = 0 ; } else = + 1 ; } else { if ( = = 0 ) { if ( ! periodic ) continue ; else = fmy - 1 ; } else = - 1 ; } if ( ! changes [ ] [ ] ) continue ; bool [ ] = wave [ ] [ ] ; bool [ ] = wave [ ] [ ] ; for ( int = 0 ; < t ; + + ) { if ( ! [ ] ) continue ; b = false ; int [ ] prop = propagator [ d ] [ ] ; for ( int = 0 ; < prop . length & & ! b ; + + ) b = [ prop [ ] ] ;
+changes [ ] [ ] = true ; change = true ;
+return change ; } protected override bool on _ boundary ( int x , int y ) = > false ;
+color [ ] tile = tiles [ observed [ x ] [ y ] ] ;
+func < func < int , int , byte > , byte [ ] > pattern = f = >
+func < int , int , byte [ ] > pattern _ from _ sample = ( x , y ) = > pattern ( ( dx , dy ) = > sample [ ( x + dx ) % smx , ( y + dy ) % smy ] ) ; func < byte [ ] , byte [ ] > rotate = p = > pattern ( ( x , y ) = > p [ n - 1 - y + x * n ] ) ; func < byte [ ] , byte [ ] > reflect = p = > pattern ( ( x , y ) = > p [ n - 1 - x + y * n ] ) ; func < byte [ ] , long > index = p = >
+func < long , byte [ ] > pattern _ from _ index = ind = >
+protected override bool on _ boundary ( int x , int y ) = > ! periodic & & ( x + n > fmx | | y + n > fmy ) ; override protected bool propagate ( ) { bool change = false , b ; int , ; for ( int = 0 ; < fmx ; + + ) for ( int = 0 ; < fmy ; + + ) if ( changes [ ] [ ] ) { changes [ ] [ ] = false ;
+= + dx ;
+= + dy ;
+bool [ ] = wave [ ] [ ] ; bool [ ] = wave [ ] [ ] ; int [ ] [ ] p = propagator [ n - 1 - dx ] [ n - 1 - dy ] ; for ( int = 0 ; < t ; + + ) { if ( ! [ ] ) continue ; b = false ; int [ ] prop = p [ ] ; for ( int = 0 ; < prop . length & & ! b ; + + ) b = [ prop [ ] ] ;
+changes [ ] [ ] = true ; change = true ;
+return change ;
+color c = colors [ patterns [ observed [ x - dx ] [ y - dy ] ] [ dx + dy * n ] ] ;
+for ( int y = 0 ; y < fmy ; y + + ) for ( int x = 0 ; x < fmx ; x + + )
+if ( on _ boundary ( sx , sy ) ) continue ; for ( int t = 0 ; t < t ; t + + ) if ( wave [ sx ] [ sy ] [ t ] )
+bitmap _ data [ x + y * fmx ] = unchecked ( ( int ) 0 xff | ( ( r / contributors ) < < NUM ) | ( ( g / contributors ) < < NUM ) | b / contributors ) ;
+for ( int t = 0 ; t < t ; t + + ) if ( t ! = ground ) wave [ x ] [ fmy - 1 ] [ t ] = false ; changes [ x ] [ fmy - 1 ] = true ;
+wave [ x ] [ y ] [ ground ] = false ; changes [ x ] [ y ] = true ; } } while ( propagate ( ) ) ; } } }
+using system _ xml ;
+var xdoc = new xml _ document ( ) ; xdoc . load ( STR ) ;
+foreach ( xml _ node xnode in xdoc . first _ child . child _ nodes )
+if ( xnode . name = = STR ) continue ;
+string name = xnode . get < string > ( STR ) ;
+if ( xnode . name = = STR ) model = new overlapping _ model ( name , xnode . get ( STR , 2 ) , xnode . get ( STR , NUM ) , xnode . get ( STR , NUM ) , xnode . get ( STR , true ) , xnode . get ( STR , false ) , xnode . get ( STR , NUM ) , xnode . get ( STR , 0 ) ) ; else if ( xnode . name = = STR ) model = new simple _ tiled _ model ( name , xnode . get < string > ( STR ) , xnode . get ( STR , NUM ) , xnode . get ( STR , NUM ) , xnode . get ( STR , false ) , xnode . get ( STR , false ) ) ;
+for ( int i = 0 ; i < xnode . get ( STR , 2 ) ; i + + )
+bool finished = model . run ( seed , xnode . get ( STR , 0 ) ) ;
+protected bool [ ] [ ] [ ] wave ; protected bool [ ] [ ] changes ;
+protected int [ ] [ ] observed ;
+protected int fmx , fmy , t , limit ;
+wave = new bool [ fmx ] [ ] [ ] ; changes = new bool [ fmx ] [ ] ; for ( int x = 0 ; x < fmx ; x + + ) { wave [ x ] = new bool [ fmy ] [ ] ; changes [ x ] = new bool [ fmy ] ;
+} protected abstract bool propagate ( ) ;
+if ( on _ boundary ( x , y ) ) continue ; w = wave [ x ] [ y ] ; amount = 0 ; sum = 0 ;
+main _ sum = 0 ; log _ sum = math . log ( sum ) ;
+argminx = x ; argminy = y ;
+if ( argminx = = - 1 & & argminy = = - 1 )
+observed = new int [ fmx ] [ ] ; for ( int x = 0 ; x < fmx ; x + + ) { observed [ x ] = new int [ fmy ] ; for ( int y = 0 ; y < fmy ; y + + ) for ( int t = 0 ; t < t ; t + + ) if ( wave [ x ] [ y ] [ t ] ) { observed [ x ] [ y ] = t ; break ; } }
+for ( int t = 0 ; t < t ; t + + ) distribution [ t ] = wave [ argminx ] [ argminy ] [ t ] ? stationary [ t ] : 0 ;
+for ( int t = 0 ; t < t ; t + + ) wave [ argminx ] [ argminy ] [ t ] = t = = r ; changes [ argminx ] [ argminy ] = true ;
+while ( propagate ( ) ) ;
+for ( int x = 0 ; x < fmx ; x + + ) for ( int y = 0 ; y < fmy ; y + + )
+for ( int t = 0 ; t < t ; t + + ) wave [ x ] [ y ] [ t ] = true ; changes [ x ] [ y ] = false ;
+protected abstract bool on _ boundary ( int x , int y ) ;
+else weights . add ( ind , 1 ) ;
+foreach ( int w in weights . keys )
+if ( allowed [ ] & & ! b )
+int w = stuff . power ( c , n * n ) ;
+func < byte [ ] , int > index = p = > { int result = 0 , power = 1 ;
+func < int , byte [ ] > pattern _ from _ index = ind = > { int residue = ind , power = w ;
+list < byte > contributors = new list < byte > ( ) ;
+for ( int t = 0 ; t < t ; t + + ) if ( wave [ sx ] [ sy ] [ t ] ) contributors . add ( patterns [ t ] [ dx + dy * n ] ) ; } int r = 0 , g = 0 , b = 0 ; foreach ( byte c in contributors ) { color color = colors [ c ] ;
+for ( int t = 0 ; t < t ; t + + ) if ( wave [ x ] [ y ] [ t ] )
+for ( int t = 0 ; t < t ; t + + ) if ( wave [ x ] [ y ] [ t ] ) main _ sum + = stationary [ t ] * log _ prob [ t ] ;
+if ( argminx = = - 1 & & argminy = = - 1 ) return true ;
+public overlapping _ model ( string name , int n , int width , int height , bool periodic _ input , bool periodic _ output , int symmetry , int ground )
+fmx = width ; fmy = height ;
+int [ ] bmp _ data = new int [ result . height * result . width ] ;
+int contributors _ nb = 0 , r = 0 , g = 0 , b = 0 ;
+contributors _ nb + + ;
+bmp _ data [ x + y * fmx ] = unchecked ( ( int ) 0 xff | ( ( r / contributors _ nb ) < < NUM ) | ( ( g / contributors _ nb ) < < NUM ) | b / contributors _ nb ) ; } var bits = result . lock _ bits ( new rectangle ( 0 , 0 , result . width , result . height ) , system . drawing . imaging . image _ lock _ mode . write _ only , system . drawing . imaging . pixel _ format . format _ bpp _ argb ) ; system . runtime . interop _ services . marshal . copy ( bmp _ data , 0 , bits . scan , bmp _ data . length ) ;
+for ( int t = 0 ; t < t ; t + + ) if ( t ! = foundation ) wave [ x ] [ fmy - 1 ] [ t ] = false ;
+wave [ x ] [ y ] [ foundation ] = false ;
+while ( propagate ( ) ) ; } } } }
+for ( int t = 1 ; t < cardinality ; t + + ) tiles . add ( rotate ( tiles [ t + t - 1 ] ) ) ;
+stack [ stacksize ] = new tuple < int , int > ( i , t ) ;
+double sum = sums _ of _ weights [ i ] ; entropies [ i ] + = sums _ of _ weight _ log _ weights [ i ] / sum - math . log ( sum ) ;
+sum = sums _ of _ weights [ i ] ; entropies [ i ] - = sums _ of _ weight _ log _ weights [ i ] / sum - math . log ( sum ) ;
+public static int random ( this double [ ] a , double r ) { double sum = a . sum ( ) ; for ( int j = 0 ; j < a . length ; j + + ) a [ j ] / = sum ; int i = 0 ; double x = 0 ; while ( i < a . length ) { x + = a [ i ] ; if ( r < = x ) return i ; i + + ;
+return 0 ; } public static long power ( int a , int n ) { long product = 1 ; for ( int i = 0 ; i < n ; i + + ) product * = a ; return product ; } public static t get < t > ( this x _ element xelem , string attribute , t default _ t = default ( t ) ) { x _ attribute a = xelem . attribute ( attribute ) ; return a = = null ? default _ t : ( t ) type _ descriptor . get _ converter ( typeof ( t ) ) . convert _ from _ invariant _ string ( a . value ) ; } public static i _ enumerable < x _ element > elements ( this x _ element x , params string [ ] names ) = > x . elements ( ) . where ( xelem = > names . any ( s = > s = = xelem . name ) ) ; }
+static void main ( ) { stopwatch sw = stopwatch . start _ new ( ) ; random random = new random ( ) ; x _ document xdoc = x _ document . load ( STR ) ; int counter = 1 ; foreach ( x _ element xelem in xdoc . root . elements ( STR , STR ) ) { model model ; string name = xelem . get < string > ( STR ) ; console . write _ line ( $ STR ) ; if ( xelem . name = = STR ) model = new overlapping _ model ( name , xelem . get ( STR , 2 ) , xelem . get ( STR , NUM ) , xelem . get ( STR , NUM ) , xelem . get ( STR , true ) , xelem . get ( STR , false ) , xelem . get ( STR , NUM ) , xelem . get ( STR , 0 ) ) ; else if ( xelem . name = = STR ) model = new simple _ tiled _ model ( name , xelem . get < string > ( STR ) , xelem . get ( STR , NUM ) , xelem . get ( STR , NUM ) , xelem . get ( STR , false ) , xelem . get ( STR , false ) ) ; else continue ; for ( int i = 0 ; i < xelem . get ( STR , 2 ) ; i + + ) { for ( int k = 0 ; k < NUM ; k + + ) { console . write ( STR ) ; int seed = random . next ( ) ; bool finished = model . run ( seed , xelem . get ( STR , 0 ) ) ; if ( finished ) { console . write _ line ( STR ) ; model . graphics ( ) . save ( $ STR ) ; if ( model is simple _ tiled _ model & & xelem . get ( STR , false ) ) system . io . file . write _ all _ text ( $ STR , ( model as simple _ tiled _ model ) . text _ output ( ) ) ; break ;
+else console . write _ line ( STR ) ; } } counter + + ; } console . write _ line ( $ STR ) ; } }
+propagator = new bool [ NUM ] [ ] [ ] ;
+propagator [ d ] = new bool [ t ] [ ] ; for ( int t = 0 ; t < t ; t + + ) propagator [ d ] [ t ] = new bool [ t ] ;
+propagator [ 0 ] [ r ] [ l ] = true ; propagator [ 0 ] [ action [ r ] [ NUM ] ] [ action [ l ] [ NUM ] ] = true ; propagator [ 0 ] [ action [ l ] [ NUM ] ] [ action [ r ] [ NUM ] ] = true ; propagator [ 0 ] [ action [ l ] [ 2 ] ] [ action [ r ] [ 2 ] ] = true ; propagator [ 1 ] [ u ] [ d ] = true ; propagator [ 1 ] [ action [ d ] [ NUM ] ] [ action [ u ] [ NUM ] ] = true ; propagator [ 1 ] [ action [ u ] [ NUM ] ] [ action [ d ] [ NUM ] ] = true ; propagator [ 1 ] [ action [ d ] [ 2 ] ] [ action [ u ] [ 2 ] ] = true ;
+propagator [ 2 ] [ ] [ ] = propagator [ 0 ] [ ] [ ] ; propagator [ NUM ] [ ] [ ] = propagator [ 1 ] [ ] [ ] ;
+for ( int = 0 ; < t ; + + ) if ( [ ] ) { bool [ ] prop = propagator [ d ] [ ] ;
+for ( int = 0 ; < t & & ! b ; + + ) if ( [ ] ) b = prop [ ] ;
+[ ] = false ;

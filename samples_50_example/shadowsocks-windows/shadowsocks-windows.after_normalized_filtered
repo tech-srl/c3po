@@ -1,0 +1,95 @@
+file _ stream file _ stream = new file _ stream ( file _ name , file _ mode . create , file _ access . write ) ;
+object [ ] states = ( object [ ] ) ar . async _ state ;
+action on _ success = ( action ) states [ 1 ] ;
+async _ session session = new async _ session ( remote ) ;
+proxy _ timer timer = ( proxy _ timer ) sender ;
+async _ session < proxy _ timer > session = ( async _ session < proxy _ timer > ) ar . async _ state ;
+server _ timer timer = ( server _ timer ) sender ;
+if ( closed ) { return ; } try { async _ session < server _ timer > session = ( async _ session < server _ timer > ) ar . async _ state ;
+if ( closed ) { return ; } try { async _ session session = ( async _ session ) ar . async _ state ;
+close ( ) ;
+running _ port = get _ free _ port ( ) ;
+if ( password . is _ null _ or _ empty ( ) )
+if ( server . is _ null _ or _ empty ( ) )
+if ( server . is _ null _ or _ empty ( ) )
+if ( remarks . is _ null _ or _ empty ( ) )
+if ( controller . get _ configuration _ copy ( ) . pac _ url . is _ null _ or _ empty ( ) )
+if ( ! controller . get _ configuration _ copy ( ) . pac _ url . is _ null _ or _ empty ( ) )
+log _ file = utils . get _ temp _ path ( STR ) ;
+var session = ( async _ session ) ar . async _ state ;
+console . write _ line ( e ) ;
+menu _ item item = new menu _ item ( strategy . name ) ;
+array . copy ( first _ packge , index , line _ buffer , 0 , length ) ;
+return pac _ file ;
+return resources . proxy _ pac _ txt ;
+lines = new [ ] { data _ line } ;
+server = server ;
+object [ ] states = ( object [ ] ) ar . async _ state ;
+action on _ success = ( action ) states [ 1 ] ;
+proxy _ timer timer = ( proxy _ timer ) sender ;
+async _ session < proxy _ timer > session = ( async _ session < proxy _ timer > ) ar . async _ state ;
+server _ timer timer = ( server _ timer ) sender ;
+if ( closed ) { return ; } try { async _ session < server _ timer > session = ( async _ session < server _ timer > ) ar . async _ state ;
+if ( closed ) { return ; } try { async _ session session = ( async _ session ) ar . async _ state ;
+encryptor = encryptor _ factory . get _ encryptor ( server . method , server . password , server . auth , false ) ;
+first _ packet = first _ packet ; first _ packet _ length = length ; handshake _ receive ( ) ; last _ activity = date _ time . now ;
+close ( ) ;
+close ( ) ; } } catch ( exception e ) { logging . log _ useful _ exception ( e ) ; close ( ) ;
+close ( ) ; } } } catch ( exception e ) { logging . log _ useful _ exception ( e ) ; close ( ) ;
+close ( ) ;
+last _ activity = date _ time . now ;
+strategy . update _ last _ read ( server ) ;
+strategy . update _ last _ write ( server ) ;
+encryptor = encryptor _ factory . get _ encryptor ( server . method , server . password ) ;
+response _ callback , null ) ;
+connection . begin _ send ( response , 0 , response . length , socket _ flags . none , read _ all , true ) ;
+connection . begin _ receive ( connetion _ recv _ buffer , 0 , recv _ size , socket _ flags . none , read _ all , null ) ;
+connection . begin _ receive ( connetion _ recv _ buffer , 0 , recv _ size , socket _ flags . none , read _ all , null ) ;
+remote . begin _ connect _ dest ( dest _ end _ point , connect _ callback , new async _ session < server _ timer > ( session , connect _ timer ) ) ;
+this . my _ cancel _ button . margin = new system . windows . forms . padding ( NUM , NUM , NUM , 0 ) ;
+package _ loss = response _ records . count ( response = > response ! = null ) / ( float ) response _ records . count ;
+all _ text _ boxes = table _ layout _ panel . get _ child _ controls < text _ box > ( ) ;
+text = n . get _ string ( STR ) ;
+close ( ) ;
+socket listener = ( socket ) ar . async _ state ; try {
+socket listener = ( socket ) ar . async _ state ; try {
+ss _ onetimeauth ( auth , buf , head _ len , encrypt _ iv , iv _ len , key , key _ len ) ;
+font = system _ fonts . message _ box _ font ;
+servers _ list _ box . dock = dock _ style . fill ; table _ layout _ panel . dock = dock _ style . fill ; perform _ layout ( ) ;
+icon = icon . from _ handle ( resources . ssw . get _ hicon ( ) ) ;
+tool _ tip . set _ tool _ tip ( portable _ mode _ check _ box , n . get _ string ( STR ) ) ;
+text = n . get _ string ( STR ) ;
+registry . set _ value ( STR , STR ) ;
+registry . set _ value ( STR , STR ) ;
+method = parts [ 0 ] ; password = parts [ 1 ] ;
+console . write _ line ( e ) ;
+color fly _ blue = color . from _ argb ( NUM , NUM , NUM , NUM ) ;
+using statistics = dictionary < string , list < availability _ statistics . raw _ statistics _ data > > ;
+if ( current _ server = = null )
+this . main _ menu = new system . windows . forms . main _ menu ( this . components ) ;
+private system . windows . forms . main _ menu main _ menu ;
+target _ port = target _ port ;
+new handler ( ) . start ( first _ packet , length , socket , target _ port ) ;
+close ( ) ;
+pipe _ remote _ receive _ callback , null ) ;
+pipe _ connection _ receive _ callback , null ) ; } catch ( exception e ) { logging . log _ useful _ exception ( e ) ; close ( ) ;
+close ( ) ;
+md ( input , ( uint ) input . length , output ) ;
+this . main _ menu = new system . windows . forms . main _ menu ( this . components ) ;
+private system . windows . forms . main _ menu main _ menu ;
+string text = string . format ( @ STR
+return STR + local _ end _ point . address + STR ;
+if ( e is socket _ exception se ) {
+bool parsed = ip _ address . try _ parse ( server . server , out ip _ address ) ;
+ip _ host _ entry ip _ host _ info = dns . get _ host _ entry ( server . server ) ;
+availability _ statistics . update _ latency ( server , ( int ) latency . total _ milliseconds ) ;
+availability _ statistics . update _ inbound _ counter ( server , n ) ;
+availability _ statistics . update _ outbound _ counter ( server , n ) ;
+public static extern void ss _ sha _ hmac _ ex ( byte [ ] key , uint keylen ,
+controller . get _ current _ strategy ( ) . update _ latency ( server , latency ) ;
+registry _ key reg _ themes _ personalize = registry . current _ user . open _ sub _ key ( STR , false ) ;
+retval = ras _ enum _ entries ( null , null , names , ref lp _ size , out lp _ names ) ;
+encryptor = new polar _ ssl _ encryptor ( STR , STR ) ; decryptor = new polar _ ssl _ encryptor ( STR , STR ) ;
+polipo _ runner . start ( config ) ; local = new local ( config ) ;
+throw new exception ( STR + line ) ;
+throw new exception ( STR + line ) ;

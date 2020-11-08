@@ -1,0 +1,95 @@
+                FileStream _FileStream = new FileStream(fileName, FileMode.Create, FileAccess.Write);
+                object[] states = (object[])ar.AsyncState;
+                Action onSuccess = (Action)states[1];
+                AsyncSession session = new AsyncSession(remote);
+            ProxyTimer timer = (ProxyTimer)sender;
+                AsyncSession<ProxyTimer> session = (AsyncSession<ProxyTimer>)ar.AsyncState;
+            ServerTimer timer = (ServerTimer)sender;
+            if (_closed)\n            {\n                return;\n            }\n            try\n            {\n                AsyncSession<ServerTimer> session = (AsyncSession<ServerTimer>)ar.AsyncState;
+            if (_closed)\n            {\n                return;\n            }\n            try\n            {\n                AsyncSession session = (AsyncSession)ar.AsyncState;
+                Close();
+                _runningPort = GetFreePort();
+            if (password.IsNullOrEmpty())
+            if (server.IsNullOrEmpty())
+            if (server.IsNullOrEmpty())
+            if (remarks.IsNullOrEmpty())
+                if (controller.GetConfigurationCopy().pacUrl.IsNullOrEmpty())
+                if (!controller.GetConfigurationCopy().pacUrl.IsNullOrEmpty())
+                LogFile = Utils.GetTempPath("shadowsocks.log");
+                var session = (AsyncSession) ar.AsyncState;
+                Console.WriteLine(e);
+                MenuItem item = new MenuItem(strategy.Name);
+                Array.Copy(firstPackge, index, _lineBuffer, 0, length);
+            return PAC_FILE;
+                return Resources.proxy_pac_txt;
+                lines = new[] { dataLine };
+            _server = server;
+                object[] states = (object[])ar.AsyncState;
+                Action onSuccess = (Action)states[1];
+            ProxyTimer timer = (ProxyTimer)sender;
+                AsyncSession<ProxyTimer> session = (AsyncSession<ProxyTimer>)ar.AsyncState;
+            ServerTimer timer = (ServerTimer)sender;
+            if (_closed)\n            {\n                return;\n            }\n            try\n            {\n                AsyncSession<ServerTimer> session = (AsyncSession<ServerTimer>)ar.AsyncState;
+            if (_closed)\n            {\n                return;\n            }\n            try\n            {\n                AsyncSession session = (AsyncSession)ar.AsyncState;
+            encryptor = EncryptorFactory.GetEncryptor(server.method, server.password, server.auth, false);
+            _firstPacket = firstPacket;\n            _firstPacketLength = length;\n            HandshakeReceive();\n            lastActivity = DateTime.Now;
+                Close();
+                    Close();\n                }\n            }\n            catch (Exception e)\n            {\n                Logging.LogUsefulException(e);\n                Close();
+                        Close();\n                    }\n                }\n            }\n            catch (Exception e)\n            {\n                Logging.LogUsefulException(e);\n                Close();
+                Close();
+                    lastActivity = DateTime.Now;
+                        strategy.UpdateLastRead(server);
+                        strategy.UpdateLastWrite(server);
+            _encryptor = EncryptorFactory.GetEncryptor(server.method, server.password);
+                                ResponseCallback, null);
+            _connection.BeginSend(response, 0, response.Length, SocketFlags.None, ReadAll, true);
+                    _connection.BeginReceive(_connetionRecvBuffer, 0, RecvSize, SocketFlags.None,\n                        ReadAll, null);
+                        _connection.BeginReceive(_connetionRecvBuffer, 0, RecvSize, SocketFlags.None,\n                            ReadAll, null);
+                remote.BeginConnectDest(destEndPoint, ConnectCallback,\n                    new AsyncSession<ServerTimer>(session, connectTimer));
+            this.MyCancelButton.Margin = new System.Windows.Forms.Padding(3, 3, 3, 0);
+            PackageLoss = responseRecords.Count(response => response != null)/(float) responseRecords.Count;
+            _allTextBoxes = tableLayoutPanel1.GetChildControls<TextBox>();
+            Text = I18N.GetString("Edit Hotkeys...");
+            Close();
+            Socket listener = (Socket)ar.AsyncState;\n            try\n            {
+            Socket listener = (Socket)ar.AsyncState;\n            try\n            {
+                            ss_onetimeauth(auth, buf, headLen, _encryptIV, ivLen, _key, keyLen);
+            Font = SystemFonts.MessageBoxFont;
+            ServersListBox.Dock = DockStyle.Fill;\n            tableLayoutPanel5.Dock = DockStyle.Fill;\n            PerformLayout();
+            Icon = Icon.FromHandle(Resources.ssw128.GetHicon());
+            toolTip1.SetToolTip(PortableModeCheckBox, I18N.GetString("Restart required"));
+            Text = I18N.GetString("Edit Servers");
+                        registry.SetValue("ProxyServer", "");
+                    registry.SetValue("ProxyServer", "");
+                method = parts[0];\n                password = parts[1];
+                Console.WriteLine(e);
+                            Color flyBlue = Color.FromArgb(192, 192, 192, 192);
+    using Statistics = Dictionary<string, List<AvailabilityStatistics.RawStatisticsData>>;
+            if (_currentServer == null)
+            this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
+        private System.Windows.Forms.MainMenu MainMenu;
+            _targetPort = targetPort;
+            new Handler().Start(firstPacket, length, socket, _targetPort);
+                    Close();
+                        PipeRemoteReceiveCallback, null);
+                        PipeConnectionReceiveCallback, null);\n                }\n                catch (Exception e)\n                {\n                    Logging.LogUsefulException(e);\n                    Close();
+                    Close();
+            md5(input, (uint)input.Length, output);
+            this.MainMenu = new System.Windows.Forms.MainMenu(this.components);
+        private System.Windows.Forms.MainMenu MainMenu;
+                string text = String.Format(@"HTTP/1.1 200 OK
+            return "PROXY " + localEndPoint.Address + ":8123;";
+                if (e is SocketException se)\n                {
+                bool parsed = IPAddress.TryParse(server.server, out ipAddress);
+                    IPHostEntry ipHostInfo = Dns.GetHostEntry(server.server);
+                availabilityStatistics.UpdateLatency(server, (int)latency.TotalMilliseconds);
+                availabilityStatistics.UpdateInboundCounter(server, n);
+                availabilityStatistics.UpdateOutboundCounter(server, n);
+        public static extern void ss_sha1_hmac_ex(byte[] key, uint keylen,
+                controller.GetCurrentStrategy().UpdateLatency(server, latency);
+                RegistryKey reg_ThemesPersonalize = Registry.CurrentUser.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", false);
+                retval = RasEnumEntries(null, null, names, ref lpSize, out lpNames);
+                        encryptor = new PolarSSLEncryptor("aes-256-cfb", "barfoo!");\n                        decryptor = new PolarSSLEncryptor("aes-256-cfb", "barfoo!");
+            polipoRunner.Start(_config);\n            local = new Local(_config);
+                                throw new Exception("Bad http header: " + line);
+                                throw new Exception("Bad http header: " + line);

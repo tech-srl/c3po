@@ -1,0 +1,1 @@
+[2020-05-12 05:15:02,216] INFO:__main__:==> Epoch 37, Test		Loss: 2.939	Acc: 0.532	Precision: 0.664	Recall: 0.606	F1: 0.633

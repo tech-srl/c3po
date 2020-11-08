@@ -1,0 +1,128 @@
+for (int t2 = 0; t2 < T; t2++) if (wave[x2][y2][t2])\n{
+for (int t1 = 0; t1 < T && !b; t1++) if (wave[x1][y1][t1]) b = propagator[d][t1][t2];
+{\npropagator[t] = new int[2 * N - 1][][];\nfor (int x = 0; x < 2 * N - 1; x++)\n{\npropagator[t][x] = new int[2 * N - 1][];\nfor (int y = 0; y < 2 * N - 1; y++)
+propagator[t][x][y] = new int[list.Count];\nfor (int c = 0; c < list.Count; c++) propagator[t][x][y][c] = list[c];
+int x2, y2, sx, sy;\nbool[] allowed;
+sx = x2;\nif (sx < 0) sx += FMX;\nelse if (sx >= FMX) sx -= FMX;\nsy = y2;\nif (sy < 0) sy += FMY;\nelse if (sy >= FMY) sy -= FMY;\nif (!periodic && (sx + N > FMX || sy + N > FMY)) continue;\nallowed = wave[sx][sy];
+if (!allowed[t2]) continue;
+int[] prop = propagator[t2][N - 1 - dx][N - 1 - dy];\nfor (int i1 = 0; i1 < prop.Length && !b; i1++) b = wave[x1][y1][prop[i1]];
+changes[sx][sy] = true;
+allowed[t2] = false;
+stationary = tempStationary.ToArray();
+propagator = new int[4][][];
+for (int i = 0; i < wave.Length; i++) wave[i] = new bool[T];
+protected double[] stationary;
+protected bool[] changes;\nprotected int[] stack;\nprotected int stacksize;
+double[] logProb;\ndouble logT;\nprotected Model(int width, int height)
+changes = new bool[FMX * FMY];\nstack = new int[FMX * FMY];
+protected abstract void Propagate();
+if (OnBoundary(i)) continue;\nbool[] w = wave[i];\nint amount = 0;\ndouble sum = 0;\nfor (int t = 0; t < T; t++) if (w[t])
+amount += 1;\nsum += stationary[t];\n}\nif (sum == 0) return false;
+double entropy;\nif (amount == 1) entropy = 0;\nelse if (amount == T) entropy = logT;\nelse\n{\ndouble mainSum = 0;\ndouble logSum = Math.Log(sum);\nfor (int t = 0; t < T; t++) if (w[t]) mainSum += stationary[t] * logProb[t];\nentropy = logSum - mainSum / sum;\n}\nif (entropy > 0 && entropy + noise < min)
+for (int t = 0; t < T; t++) distribution[t] = wave[argmin][t] ? stationary[t] : 0;
+for (int t = 0; t < T; t++) wave[argmin][t] = t == r;\nChange(argmin);
+logT = Math.Log(T);\nlogProb = new double[T];\nfor (int t = 0; t < T; t++) logProb[t] = Math.Log(stationary[t]);
+protected void Change(int i)
+if (changes[i]) return;\nstack[stacksize] = i;
+changes[i] = true;
+for (int t = 0; t < T; t++) wave[i][t] = true;\nchanges[i] = false;
+protected abstract bool OnBoundary(int i);
+stationary = new double[T];\npropagator = new int[2 * N - 1][][][];
+stationary[counter] = weights[w];
+for (int i = 0; i < wave.Length; i++) wave[i] = new bool[T];
+for (int x = 0; x < 2 * N - 1; x++)
+propagator[x] = new int[2 * N - 1][][];\nfor (int y = 0; y < 2 * N - 1; y++)\n{\npropagator[x][y] = new int[T][];
+for (int t2 = 0; t2 < T; t2++) if (agrees(patterns[t], patterns[t2], x - N + 1, y - N + 1)) list.Add(t2);\npropagator[x][y][t] = new int[list.Count];\nfor (int c = 0; c < list.Count; c++) propagator[x][y][t][c] = list[c];
+}\nprotected override bool OnBoundary(int i) => !periodic && (i % FMX + N > FMX || i / FMX + N > FMY);\noverride protected void Propagate()\n{\nwhile (stacksize > 0)\n{\nint i1 = stack[stacksize - 1];\nstacksize--;\nchanges[i1] = false;\nbool[] w1 = wave[i1];\nint x1 = i1 % FMX, y1 = i1 / FMX;\nfor (int dx = -N + 1; dx < N; dx++) for (int dy = -N + 1; dy < N; dy++)\n{\nint x2 = x1 + dx;\nif (x2 < 0) x2 += FMX;\nelse if (x2 >= FMX) x2 -= FMX;\nint y2 = y1 + dy;\nif (y2 < 0) y2 += FMY;\nelse if (y2 >= FMY) y2 -= FMY;\nif (!periodic && (x2 + N > FMX || y2 + N > FMY)) continue;\nint i2 = x2 + y2 * FMX;\nbool[] w2 = wave[i2];\nint[][] prop = propagator[N - 1 - dx][N - 1 - dy];\nfor (int t2 = 0; t2 < T; t2++) if (w2[t2])\n{\nbool b = false;\nint[] p = prop[t2];\nfor (int l = 0; l < p.Length && !b; l++) b = w1[p[l]];\nif (!b)\n{\nChange(i2);\nw2[t2] = false;\n}\n}\n}\n}\n}
+using System.Xml;
+for (int j = 0; j < a.Count(); j++) a[j] = 1;
+for (int j = 0; j < a.Count(); j++) a[j] /= sum;
+while (i < a.Count())
+public static T Get<T>(this XmlNode node, string attribute, T defaultT = default(T))
+string s = ((XmlElement)node).GetAttribute(attribute);\nvar converter = TypeDescriptor.GetConverter(typeof(T));\nreturn s == "" ? defaultT : (T)converter.ConvertFromInvariantString(s);
+using System.Xml;
+var xdoc = new XmlDocument();\nxdoc.Load($"samples/{name}/data.xml");\nXmlNode xnode = xdoc.FirstChild;\ntilesize = xnode.Get("size", 16);\nbool unique = xnode.Get("unique", false);\nxnode = xnode.FirstChild;
+subset = new List<string>();\nforeach (XmlNode xsubset in xnode.NextSibling.NextSibling.ChildNodes) \nif (xsubset.NodeType != XmlNodeType.Comment && xsubset.Get<string>("name") == subsetName)\nforeach (XmlNode stile in xsubset.ChildNodes) subset.Add(stile.Get<string>("name"));\n}\nFunc<Func<int, int, Color>, Color[]> tile = f =>
+Func<Color[], Color[]> rotate = array => tile((x, y) => array[tilesize - 1 - y + x * tilesize]);
+foreach (XmlNode xtile in xnode.ChildNodes)
+protected override bool Propagate()\n{\nbool change = false, b;\nfor (int x2 = 0; x2 < FMX; x2++) for (int y2 = 0; y2 < FMY; y2++) for (int d = 0; d < 4; d++)\n{\nint x1 = x2, y1 = y2;
+if (x2 == 0)\n{\nif (!periodic) continue;\nelse x1 = FMX - 1;\n}\nelse x1 = x2 - 1;
+if (y2 == FMY - 1)\n{\nif (!periodic) continue;\nelse y1 = 0;\n}\nelse y1 = y2 + 1;
+if (x2 == FMX - 1)\n{\nif (!periodic) continue;\nelse x1 = 0;\n}\nelse x1 = x2 + 1;\n}\nelse\n{\nif (y2 == 0)\n{\nif (!periodic) continue;\nelse y1 = FMY - 1;\n}\nelse y1 = y2 - 1;\n}\nif (!changes[x1][y1]) continue;\nbool[] w1 = wave[x1][y1];\nbool[] w2 = wave[x2][y2];\nfor (int t2 = 0; t2 < T; t2++)\n{\nif (!w2[t2]) continue;\nb = false;\nint[] prop = propagator[d][t2];\nfor (int i1 = 0; i1 < prop.Length && !b; i1++) b = w1[prop[i1]];
+changes[x2][y2] = true;\nchange = true;
+return change;\n}\nprotected override bool OnBoundary(int x, int y) => false;
+Color[] tile = tiles[observed[x][y]];
+Func<Func<int, int, byte>, byte[]> pattern = f =>
+Func<int, int, byte[]> patternFromSample = (x, y) => pattern((dx, dy) => sample[(x + dx) % SMX, (y + dy) % SMY]);\nFunc<byte[], byte[]> rotate = p => pattern((x, y) => p[N - 1 - y + x * N]);\nFunc<byte[], byte[]> reflect = p => pattern((x, y) => p[N - 1 - x + y * N]);\nFunc<byte[], long> index = p =>
+Func<long, byte[]> patternFromIndex = ind =>
+protected override bool OnBoundary(int x, int y) => !periodic && (x + N > FMX || y + N > FMY);\noverride protected bool Propagate()\n{\nbool change = false, b;\nint x2, y2;\nfor (int x1 = 0; x1 < FMX; x1++) for (int y1 = 0; y1 < FMY; y1++) if (changes[x1][y1])\n{\nchanges[x1][y1] = false;
+x2 = x1 + dx;
+y2 = y1 + dy;
+bool[] w1 = wave[x1][y1];\nbool[] w2 = wave[x2][y2];\nint[][] p = propagator[N - 1 - dx][N - 1 - dy];\nfor (int t2 = 0; t2 < T; t2++)\n{\nif (!w2[t2]) continue;\nb = false;\nint[] prop = p[t2];\nfor (int i1 = 0; i1 < prop.Length && !b; i1++) b = w1[prop[i1]];
+changes[x2][y2] = true;\nchange = true;
+return change;
+Color c = colors[patterns[observed[x - dx][y - dy]][dx + dy * N]];
+for (int y = 0; y < FMY; y++) for (int x = 0; x < FMX; x++)
+if (OnBoundary(sx, sy)) continue;\nfor (int t = 0; t < T; t++) if (wave[sx][sy][t])
+bitmapData[x + y * FMX] = unchecked((int)0xff000000 | ((r / contributors) << 16) | ((g / contributors) << 8) | b / contributors);
+for (int t = 0; t < T; t++) if (t != ground) wave[x][FMY - 1][t] = false;\nchanges[x][FMY - 1] = true;
+wave[x][y][ground] = false;\nchanges[x][y] = true;\n}\n}\nwhile (Propagate()) ;\n}\n}\n}
+using System.Xml;
+var xdoc = new XmlDocument();\nxdoc.Load("samples.xml");
+foreach (XmlNode xnode in xdoc.FirstChild.ChildNodes)
+if (xnode.Name == "#comment") continue;
+string name = xnode.Get<string>("name");
+if (xnode.Name == "overlapping") model = new OverlappingModel(name, xnode.Get("N", 2), xnode.Get("width", 48), xnode.Get("height", 48), \nxnode.Get("periodicInput", true), xnode.Get("periodic", false), xnode.Get("symmetry", 8), xnode.Get("ground", 0));\nelse if (xnode.Name == "simpletiled") model = new SimpleTiledModel(name, xnode.Get<string>("subset"), \nxnode.Get("width", 10), xnode.Get("height", 10), xnode.Get("periodic", false), xnode.Get("black", false));
+for (int i = 0; i < xnode.Get("screenshots", 2); i++)
+bool finished = model.Run(seed, xnode.Get("limit", 0));
+protected bool[][][] wave;\nprotected bool[][] changes;
+protected int[][] observed;
+protected int FMX, FMY, T, limit;
+wave = new bool[FMX][][];\nchanges = new bool[FMX][];\nfor (int x = 0; x < FMX; x++)\n{\nwave[x] = new bool[FMY][];\nchanges[x] = new bool[FMY];
+}\nprotected abstract bool Propagate();
+if (OnBoundary(x, y)) continue;\nw = wave[x][y];\namount = 0;\nsum = 0;
+mainSum = 0;\nlogSum = Math.Log(sum);
+argminx = x;\nargminy = y;
+if (argminx == -1 && argminy == -1)
+observed = new int[FMX][];\nfor (int x = 0; x < FMX; x++)\n{\nobserved[x] = new int[FMY];\nfor (int y = 0; y < FMY; y++) for (int t = 0; t < T; t++) if (wave[x][y][t])\n{\nobserved[x][y] = t;\nbreak;\n}\n}
+for (int t = 0; t < T; t++) distribution[t] = wave[argminx][argminy][t] ? stationary[t] : 0;
+for (int t = 0; t < T; t++) wave[argminx][argminy][t] = t == r;\nchanges[argminx][argminy] = true;
+while (Propagate());
+for (int x = 0; x < FMX; x++) for (int y = 0; y < FMY; y++)
+for (int t = 0; t < T; t++) wave[x][y][t] = true;\nchanges[x][y] = false;
+protected abstract bool OnBoundary(int x, int y);
+else weights.Add(ind, 1);
+foreach (int w in weights.Keys)
+if (allowed[t2] && !b)
+int W = Stuff.Power(C, N * N);
+Func<byte[], int> index = p =>\n{\nint result = 0, power = 1;
+Func<int, byte[]> patternFromIndex = ind =>\n{\nint residue = ind, power = W;
+List<byte> contributors = new List<byte>();
+for (int t = 0; t < T; t++) if (wave[sx][sy][t]) contributors.Add(patterns[t][dx + dy * N]);\n}\nint r = 0, g = 0, b = 0;\nforeach (byte c in contributors)\n{\nColor color = colors[c];
+for (int t = 0; t < T; t++) if (wave[x][y][t])
+for (int t = 0; t < T; t++) if (wave[x][y][t]) mainSum += stationary[t] * logProb[t];
+if (argminx == -1 && argminy == -1) return true;
+public OverlappingModel(string name, int N, int width, int height, bool periodicInput, bool periodicOutput, int symmetry, int ground)
+FMX = width;\nFMY = height;
+int[] bmpData = new int[result.Height * result.Width];
+int contributorsNb = 0, r = 0, g = 0, b = 0;
+contributorsNb++;
+                bmpData[x + y * FMX] = unchecked((int)0xff000000 | ((r / contributorsNb) << 16) | ((g / contributorsNb) << 8) | b / contributorsNb);\n}\nvar bits = result.LockBits(new Rectangle(0, 0, result.Width, result.Height), System.Drawing.Imaging.ImageLockMode.WriteOnly, System.Drawing.Imaging.PixelFormat.Format32bppArgb);\n        System.Runtime.InteropServices.Marshal.Copy(bmpData, 0, bits.Scan0, bmpData.Length);
+for (int t = 0; t < T; t++) if (t != foundation) wave[x][FMY - 1][t] = false;
+wave[x][y][foundation] = false;
+while (Propagate());\n}\n}\n}\n}
+for (int t = 1; t < cardinality; t++) tiles.Add(rotate(tiles[T + t - 1]));
+stack[stacksize] = new Tuple<int, int>(i, t);
+double sum = sumsOfWeights[i];\nentropies[i] += sumsOfWeightLogWeights[i] / sum - Math.Log(sum);
+sum = sumsOfWeights[i];\nentropies[i] -= sumsOfWeightLogWeights[i] / sum - Math.Log(sum);
+public static int Random(this double[] a, double r)\n{\ndouble sum = a.Sum();\nfor (int j = 0; j < a.Length; j++) a[j] /= sum;\nint i = 0;\ndouble x = 0;\nwhile (i < a.Length)\n{\nx += a[i];\nif (r <= x) return i;\ni++;
+return 0;\n}\npublic static long Power(int a, int n)\n{\nlong product = 1;\nfor (int i = 0; i < n; i++) product *= a;\nreturn product;\n}\npublic static T Get<T>(this XElement xelem, string attribute, T defaultT = default(T))\n{\nXAttribute a = xelem.Attribute(attribute);\nreturn a == null ? defaultT : (T)TypeDescriptor.GetConverter(typeof(T)).ConvertFromInvariantString(a.Value);\n}\npublic static IEnumerable<XElement> Elements(this XElement x, params string[] names) => x.Elements().Where(xelem => names.Any(s => s == xelem.Name));\n}
+static void Main()\n{\nStopwatch sw = Stopwatch.StartNew();\nRandom random = new Random();\nXDocument xdoc = XDocument.Load("samples.xml");\nint counter = 1;\nforeach (XElement xelem in xdoc.Root.Elements("overlapping", "simpletiled"))\n{\nModel model;\nstring name = xelem.Get<string>("name");\nConsole.WriteLine($"< {name}");\nif (xelem.Name == "overlapping") model = new OverlappingModel(name, xelem.Get("N", 2), xelem.Get("width", 48), xelem.Get("height", 48), \nxelem.Get("periodicInput", true), xelem.Get("periodic", false), xelem.Get("symmetry", 8), xelem.Get("ground", 0));\nelse if (xelem.Name == "simpletiled") model = new SimpleTiledModel(name, xelem.Get<string>("subset"), \nxelem.Get("width", 10), xelem.Get("height", 10), xelem.Get("periodic", false), xelem.Get("black", false));\nelse continue;\nfor (int i = 0; i < xelem.Get("screenshots", 2); i++)\n{\nfor (int k = 0; k < 10; k++)\n{\nConsole.Write("> ");\nint seed = random.Next();\nbool finished = model.Run(seed, xelem.Get("limit", 0));\nif (finished)\n{\nConsole.WriteLine("DONE");\nmodel.Graphics().Save($"{counter} {name} {i}.png");\nif (model is SimpleTiledModel && xelem.Get("textOutput", false))\nSystem.IO.File.WriteAllText($"{counter} {name} {i}.txt", (model as SimpleTiledModel).TextOutput());\nbreak;
+else Console.WriteLine("CONTRADICTION");\n}\n}\ncounter++;\n}\nConsole.WriteLine($"time = {sw.ElapsedMilliseconds}");\n}\n}
+propagator = new bool[4][][];
+propagator[d] = new bool[T][];\nfor (int t = 0; t < T; t++) propagator[d][t] = new bool[T];
+propagator[0][R][L] = true;\npropagator[0][action[R][6]][action[L][6]] = true;\npropagator[0][action[L][4]][action[R][4]] = true;\npropagator[0][action[L][2]][action[R][2]] = true;\npropagator[1][U][D] = true;\npropagator[1][action[D][6]][action[U][6]] = true;\npropagator[1][action[U][4]][action[D][4]] = true;\npropagator[1][action[D][2]][action[U][2]] = true;
+propagator[2][t2][t1] = propagator[0][t1][t2];\npropagator[3][t2][t1] = propagator[1][t1][t2];
+for (int t2 = 0; t2 < T; t2++) if (w2[t2])\n{\nbool[] prop = propagator[d][t2];
+for (int t1 = 0; t1 < T && !b; t1++) if (w1[t1]) b = prop[t1];
+w2[t2] = false;

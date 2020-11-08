@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.kohsuke.args4j:args4j-maven-plugin:2.33">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kohsuke/args4j/args4j-maven-plugin/2.33/args4j-maven-plugin-2.33.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kohsuke/args4j/args4j-maven-plugin/2.33/args4j-maven-plugin-2.33-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/kohsuke/args4j/args4j-maven-plugin/2.33/args4j-maven-plugin-2.33-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

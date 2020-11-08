@@ -1,0 +1,127 @@
+bool[] w1 = wave[x1][y1];\nbool[] w2 = wave[x2][y2];\nfor (int t2 = 0; t2 < T; t2++) if (w2[t2])\n{\nbool[] prop = propagator[d][t2];
+for (int t1 = 0; t1 < T && !b; t1++) if (w1[t1]) b = prop[t1];
+
+propagator[x][y][t] = new int[list.Count];\nfor (int c = 0; c < list.Count; c++) propagator[x][y][t][c] = list[c];
+int x2, y2;
+if (y2 < 0) y2 += FMY;\nelse if (y2 >= FMY) y2 -= FMY;\nif (!periodic && (x2 + N > FMX || y2 + N > FMY)) continue;\nbool[] w1 = wave[x1][y1];\nbool[] w2 = wave[x2][y2];\nint[][] p = propagator[N - 1 - dx][N - 1 - dy];
+if (!w2[t2]) continue;
+int[] prop = p[t2];\nfor (int i1 = 0; i1 < prop.Length && !b; i1++) b = w1[prop[i1]];
+changes[x2][y2] = true;
+w2[t2] = false;
+weights = tempStationary.ToArray();\npropagator = new int[4][][];
+
+
+protected int[][][] propagator;\nint[][][] compatible;
+Tuple<int, int>[] stack;\nint stacksize;
+protected double[] weights;\ndouble[] weightLogWeights;\nint[] sumsOfOnes;\ndouble sumOfWeights, sumOfWeightLogWeights, startingEntropy;\ndouble[] sumsOfWeights, sumsOfWeightLogWeights, entropies;\nprotected Model(int width, int height) 
+compatible = new int[wave.Length][][];\nfor (int i = 0; i < wave.Length; i++)\n{\nwave[i] = new bool[T];\ncompatible[i] = new int[T][];\nfor (int t = 0; t < T; t++) compatible[i][t] = new int[4];\n}\nweightLogWeights = new double[T];\nsumOfWeights = 0;\nsumOfWeightLogWeights = 0;\nfor (int t = 0; t < T; t++)\n{\nweightLogWeights[t] = weights[t] * Math.Log(weights[t]);\nsumOfWeights += weights[t];\nsumOfWeightLogWeights += weightLogWeights[t];\n}\nstartingEntropy = Math.Log(sumOfWeights) - sumOfWeightLogWeights / sumOfWeights;\nsumsOfOnes = new int[FMX * FMY];\nsumsOfWeights = new double[FMX * FMY];\nsumsOfWeightLogWeights = new double[FMX * FMY];\nentropies = new double[FMX * FMY];\nstack = new Tuple<int, int>[wave.Length * T];
+
+if (OnBoundary(i % FMX, i / FMX)) continue;\nint amount = sumsOfOnes[i];\nif (amount == 0) return false;\ndouble entropy = entropies[i];\nif (amount > 1 && entropy <= min)
+
+if (entropy + noise < min)
+for (int t = 0; t < T; t++) distribution[t] = wave[argmin][t] ? weights[t] : 0;
+bool[] w = wave[argmin];\nfor (int t = 0; t < T; t++)if (w[t] != (t == r)) Ban(argmin, t);
+if (wave == null) Init();
+protected void Ban(int i, int t)
+wave[i][t] = false;\nint[] comp = compatible[i][t];\nfor (int d = 0; d < 4; d++) comp[d] = 0;\nstack[stacksize] = new Tuple<int, int>(i, t);
+double sum = sumsOfWeights[i];\nentropies[i] += sumsOfWeightLogWeights[i] / sum - Math.Log(sum);\nsumsOfOnes[i] -= 1;\nsumsOfWeights[i] -= weights[t];\nsumsOfWeightLogWeights[i] -= weightLogWeights[t];\nsum = sumsOfWeights[i];\nentropies[i] -= sumsOfWeightLogWeights[i] / sum - Math.Log(sum);
+for (int t = 0; t < T; t++)\n{\nwave[i][t] = true;\nfor (int d = 0; d < 4; d++) compatible[i][t][d] = propagator[opposite[d]][t].Length;\n}\nsumsOfOnes[i] = weights.Length;\nsumsOfWeights[i] = sumOfWeights;\nsumsOfWeightLogWeights[i] = sumOfWeightLogWeights;\nentropies[i] = startingEntropy;
+protected abstract bool OnBoundary(int x, int y);
+base.weights = new double[T];
+base.weights[counter] = weights[w];
+
+propagator = new int[4][][];\nfor (int d = 0; d < 4; d++)
+propagator[d] = new int[T][];
+for (int t2 = 0; t2 < T; t2++) if (agrees(patterns[t], patterns[t2], DX[d], DY[d])) list.Add(t2);\npropagator[d][t] = new int[list.Count];\nfor (int c = 0; c < list.Count; c++) propagator[d][t][c] = list[c];
+protected override bool OnBoundary(int x, int y) => !periodic && (x + N > FMX || y + N > FMY || x < 0 || y < 0);
+
+for (int j = 0; j < a.Length; j++) a[j] = 1;
+for (int j = 0; j < a.Length; j++) a[j] /= sum;
+while (i < a.Length)
+public static T Get<T>(this XElement xelem, string attribute, T defaultT = default(T))
+XAttribute a = xelem.Attribute(attribute);\nreturn a == null ? defaultT : (T)TypeDescriptor.GetConverter(typeof(T)).ConvertFromInvariantString(a.Value);
+
+XElement xroot = XDocument.Load($"samples/{name}/data.xml").Root;\ntilesize = xroot.Get("size", 16);\nbool unique = xroot.Get("unique", false);
+XElement xsubset = xroot.Element("subsets").Elements("subset").FirstOrDefault(x => x.Get<string>("name") == subsetName);\nif (xsubset == null) Console.WriteLine($"ERROR: subset {subsetName} is not found");\nelse subset = xsubset.Elements("tile").Select(x => x.Get<string>("name")).ToList();\n}\nColor[] tile (Func<int, int, Color> f)
+Color[] rotate(Color[] array) => tile((x, y) => array[tilesize - 1 - y + x * tilesize]);
+foreach (XElement xtile in xroot.Element("tiles").Elements("tile"))
+protected override void Propagate()\n{\nwhile (stacksize > 0)\n{\nint i1 = stack[stacksize - 1];\nchanges[i1] = false;\nstacksize--;\nbool[] w1 = wave[i1];\nint x1 = i1 % FMX, y1 = i1 / FMX;\nfor (int d = 0; d < 4; d++)\n{\nint x2 = x1, y2 = y1;
+if (x1 == FMX - 1)\n{\nif (!periodic) continue;\nelse x2 = 0;\n}\nelse x2 = x1 + 1;
+if (y1 == 0)\n{\nif (!periodic) continue;\nelse y2 = FMY - 1;\n}\nelse y2 = y1 - 1;
+if (x1 == 0)\n{\nif (!periodic) continue;\nelse x2 = FMX - 1;\n}\nelse x2 = x1 - 1;\n}\nelse\n{\nif (y1 == FMY - 1)\n{\nif (!periodic) continue;\nelse y2 = 0;\n}\nelse y2 = y1 + 1;\n}\nint i2 = x2 + y2 * FMX;\nbool[] w2 = wave[i2];\nint[][] prop = propagator[d];\nfor (int t2 = 0; t2 < T; t2++) if (w2[t2])\n{\nbool b = false;\nint[] p = prop[t2];\nfor (int l = 0; l < p.Length && !b; l++) b = w1[p[l]];
+Change(i2);
+}\n}\nprotected override bool OnBoundary(int i) => false;
+Color[] tile = tiles[observed[x + y * FMX]];
+byte[] pattern (Func<int, int, byte> f)
+byte[] patternFromSample(int x, int y) => pattern((dx, dy) => sample[(x + dx) % SMX, (y + dy) % SMY]);\nbyte[] rotate(byte[] p) => pattern((x, y) => p[N - 1 - y + x * N]);\nbyte[] reflect(byte[] p) => pattern((x, y) => p[N - 1 - x + y * N]);\nlong index(byte[] p)
+byte[] patternFromIndex(long ind)
+protected override bool OnBoundary(int i) => !periodic && (i % FMX + N > FMX || i / FMX + N > FMY);\noverride protected void Propagate()\n{\nwhile (stacksize > 0)\n{\nint i1 = stack[stacksize - 1];\nstacksize--;\nchanges[i1] = false;\nbool[] w1 = wave[i1];\nint x1 = i1 % FMX, y1 = i1 / FMX;
+int x2 = x1 + dx;
+int y2 = y1 + dy;
+int i2 = x2 + y2 * FMX;\nbool[] w2 = wave[i2];\nint[][] prop = propagator[N - 1 - dx][N - 1 - dy];\nfor (int t2 = 0; t2 < T; t2++) if (w2[t2])\n{\nbool b = false;\nint[] p = prop[t2];\nfor (int l = 0; l < p.Length && !b; l++) b = w1[p[l]];
+Change(i2);
+
+Color c = colors[patterns[observed[x - dx + (y - dy) * FMX]][dx + dy * N]];
+for (int i = 0; i < wave.Length; i++)
+int s = sx + sy * FMX;\nif (OnBoundary(s)) continue;\nfor (int t = 0; t < T; t++) if (wave[s][t])
+bitmapData[i] = unchecked((int)0xff000000 | ((r / contributors) << 16) | ((g / contributors) << 8) | b / contributors);
+for (int t = 0; t < T; t++) if (t != ground) wave[x + (FMY - 1) * FMX][t] = false;\nChange(x + (FMY - 1) * FMX);
+wave[x + y * FMX][ground] = false;\nChange(x + y * FMX);\n}\n}\nPropagate();\n}\n}\n}
+using System.Xml.Linq;
+XDocument xdoc = XDocument.Load("samples.xml");
+foreach (XElement xelem in xdoc.Root.Elements("overlapping", "simpletiled"))
+
+string name = xelem.Get<string>("name");
+if (xelem.Name == "overlapping") model = new OverlappingModel(name, xelem.Get("N", 2), xelem.Get("width", 48), xelem.Get("height", 48), \nxelem.Get("periodicInput", true), xelem.Get("periodic", false), xelem.Get("symmetry", 8), xelem.Get("ground", 0));\nelse if (xelem.Name == "simpletiled") model = new SimpleTiledModel(name, xelem.Get<string>("subset"), \nxelem.Get("width", 10), xelem.Get("height", 10), xelem.Get("periodic", false), xelem.Get("black", false));
+for (int i = 0; i < xelem.Get("screenshots", 2); i++)
+bool finished = model.Run(seed, xelem.Get("limit", 0));
+protected bool[][] wave;
+protected int[] observed;\nprotected bool[] changes;\nprotected int[] stack;\nprotected int stacksize;
+protected int FMX, FMY, T;
+wave = new bool[FMX * FMY][];\nchanges = new bool[FMX * FMY];\nstack = new int[FMX * FMY];\nstacksize = 0;
+protected abstract void Propagate();
+if (OnBoundary(i)) continue;\nbool[] w = wave[i];\nint amount = 0;\ndouble sum = 0;
+double mainSum = 0;\ndouble logSum = Math.Log(sum);
+argmin = i;
+if (argmin == -1)
+observed = new int[FMX * FMY];\nfor (int i = 0; i < wave.Length; i++) for (int t = 0; t < T; t++) if (wave[i][t]) { observed[i] = t; break; }
+for (int t = 0; t < T; t++) distribution[t] = wave[argmin][t] ? stationary[t] : 0;
+for (int t = 0; t < T; t++) wave[argmin][t] = t == r;\nChange(argmin);
+Propagate();
+for (int i = 0; i < wave.Length; i++)
+for (int t = 0; t < T; t++) wave[i][t] = true;\nchanges[i] = false;
+protected abstract bool OnBoundary(int i);
+else\n{\nweights.Add(ind, 1);\nordering.Add(ind);\n}
+foreach (int w in ordering)
+if (!b)
+long W = Stuff.Power(C, N * N);
+Func<byte[], long> index = p =>\n{\nlong result = 0, power = 1;
+Func<long, byte[]> patternFromIndex = ind =>\n{\nlong residue = ind, power = W;
+int contributorsNb = 0, r = 0, g = 0, b = 0;
+for (int t = 0; t < T; t++) if (wave[sx][sy][t])\n{\ncontributorsNb++;\nColor color = colors[patterns[t][dx + dy * N]];
+for (int t = 0; t < T; t++) if (w[t])
+for (int t = 0; t < T; t++) if (w[t]) mainSum += stationary[t] * logProb[t];
+if (argminx == -1 && argminy == -1)\n{\nobserved = new int[FMX][];\nfor (int x = 0; x < FMX; x++)\n{\nobserved[x] = new int[FMY];\nfor (int y = 0; y < FMY; y++) for (int t = 0; t < T; t++) if (wave[x][y][t])\n{\nobserved[x][y] = t;\nbreak;\n}\n}\nreturn true;\n}
+public OverlappingModel(string name, int N, int width, int height, bool periodicInput, bool periodicOutput, int symmetry, int ground) \n: base(width, height)
+
+int[] bitmapData = new int[result.Height * result.Width];
+int contributors = 0, r = 0, g = 0, b = 0;
+contributors++;
+                bitmapData[x + y * FMX] = unchecked((int)0xff000000 | ((r / contributors) << 16) | ((g / contributors) << 8) | b / contributors);\n}\nvar bits = result.LockBits(new Rectangle(0, 0, result.Width, result.Height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);\n        System.Runtime.InteropServices.Marshal.Copy(bitmapData, 0, bits.Scan0, bitmapData.Length);
+for (int t = 0; t < T; t++) if (t != ground) wave[x][FMY - 1][t] = false;
+wave[x][y][ground] = false;
+}\nwhile (Propagate()) ;\n}\n}\n}
+tilenames.Add($"{tilename} 0");\nfor (int t = 1; t < cardinality; t++)\n{\ntiles.Add(rotate(tiles[T + t - 1]));\ntilenames.Add($"{tilename} {t}");\n}
+stack[stacksize] = (i, t);
+
+double sum = sumsOfWeights[i];\nentropies[i] = Math.Log(sum) - sumsOfWeightLogWeights[i] / sum;
+    public static int Random(this double[] a, double r)\n    {\n        double sum = a.Sum();\n        for (int j = 0; j < a.Length; j++) a[j] /= sum;\n        int i = 0;\n        double x = 0;\n        while (i < a.Length)\n        {\n            x += a[i];\n            if (r <= x) return i;\n            i++;\n        }\n        return 0;\n    }\n    public static long Power(int a, int n)\n    {\n        long product = 1;\n        for (int i = 0; i < n; i++) product *= a;\n        return product;\n    }\n    public static T Get<T>(this XElement xelem, string attribute, T defaultT = default(T))\n    {\n        XAttribute a = xelem.Attribute(attribute);\n        return a == null ? defaultT : (T)TypeDescriptor.GetConverter(typeof(T)).ConvertFromInvariantString(a.Value);\n    }\n    public static IEnumerable<XElement> Elements(this XElement x, params string[] names) => x.Elements().Where(xelem => names.Any(s => s == xelem.Name));
+
+    static void Main()\n    {\n        Stopwatch sw = Stopwatch.StartNew();\n        Random random = new Random();\n        XDocument xdoc = XDocument.Load("samples.xml");\n        int counter = 1;\n        foreach (XElement xelem in xdoc.Root.Elements("overlapping", "simpletiled"))\n        {\n            Model model;\n            string name = xelem.Get<string>("name");\n            Console.WriteLine($"< {name}");\n            if (xelem.Name == "overlapping") model = new OverlappingModel(name, xelem.Get("N", 2), xelem.Get("width", 48), xelem.Get("height", 48),\n                xelem.Get("periodicInput", true), xelem.Get("periodic", false), xelem.Get("symmetry", 8), xelem.Get("ground", 0));\n            else if (xelem.Name == "simpletiled") model = new SimpleTiledModel(name, xelem.Get<string>("subset"),\n                xelem.Get("width", 10), xelem.Get("height", 10), xelem.Get("periodic", false), xelem.Get("black", false));\n            else continue;\n            for (int i = 0; i < xelem.Get("screenshots", 2); i++)\n            {\n                for (int k = 0; k < 10; k++)\n                {\n                    Console.Write("> ");\n                    int seed = random.Next();\n                    bool finished = model.Run(seed, xelem.Get("limit", 0));\n                    if (finished)\n                    {\n                        Console.WriteLine("DONE");\n                        model.Graphics().Save($"{counter} {name} {i}.png");\n                        if (model is SimpleTiledModel && xelem.Get("textOutput", false))\n                            System.IO.File.WriteAllText($"{counter} {name} {i}.txt", (model as SimpleTiledModel).TextOutput());\n                        break;\n                    }\n                    else Console.WriteLine("CONTRADICTION");\n                }\n            }\n            counter++;\n        }\n        Console.WriteLine($"time = {sw.ElapsedMilliseconds}");\n    }
+
+var tempPropagator = new bool[4][][];\npropagator = new int[4][][];
+tempPropagator[d] = new bool[T][];\npropagator[d] = new int[T][];\nfor (int t = 0; t < T; t++) tempPropagator[d][t] = new bool[T];
+tempPropagator[0][R][L] = true;\ntempPropagator[0][action[R][6]][action[L][6]] = true;\ntempPropagator[0][action[L][4]][action[R][4]] = true;\ntempPropagator[0][action[L][2]][action[R][2]] = true;\ntempPropagator[1][U][D] = true;\ntempPropagator[1][action[D][6]][action[U][6]] = true;\ntempPropagator[1][action[U][4]][action[D][4]] = true;\ntempPropagator[1][action[D][2]][action[U][2]] = true;
+tempPropagator[2][t2][t1] = tempPropagator[0][t1][t2];\ntempPropagator[3][t2][t1] = tempPropagator[1][t1][t2];\n}\nList<int>[][] sparsePropagator = new List<int>[4][];\nfor (int d = 0; d < 4; d++)\n{\nsparsePropagator[d] = new List<int>[T];\nfor (int t = 0; t < T; t++) sparsePropagator[d][t] = new List<int>();\n}\nfor (int d = 0; d < 4; d++) for (int t1 = 0; t1 < T; t1++)\n{\nList<int> sp = sparsePropagator[d][t1];\nbool[] tp = tempPropagator[d][t1];\nfor (int t2 = 0; t2 < T; t2++) if (tp[t2]) sp.Add(t2);\nint ST = sp.Count;\npropagator[d][t1] = new int[ST];\nfor (int st = 0; st < ST; st++) propagator[d][t1][st] = sp[st];
+for (int t2 = 0; t2 < T; t2++)\n{\nif (!w2[t2]) continue;
+int[] prop = propagator[d][t2];\nfor (int i1 = 0; i1 < prop.Length && !b; i1++) b = w1[prop[i1]];

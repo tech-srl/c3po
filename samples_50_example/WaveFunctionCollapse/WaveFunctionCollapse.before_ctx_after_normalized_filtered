@@ -1,0 +1,2 @@
+{ if ( = = fmx - 1 ) { if ( ! periodic ) continue ; else = 0 ; } else = + 1 ; } else if ( d = = 1 ) {
+

@@ -1,0 +1,2 @@
+{ if ( = = <%> <*> 0 -> fmx - 1 </%> ) { if ( ! periodic ) continue ; else = <%> <*> fmx - 1 -> 0 </%> ; } else = <%> <*> - -> + </%> 1 ; } else if ( d = = 1 ) {
+

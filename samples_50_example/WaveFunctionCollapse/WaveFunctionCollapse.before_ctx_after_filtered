@@ -1,0 +1,2 @@
+{\nif (x1 == FMX - 1)\n{\nif (!periodic) continue;\nelse x2 = 0;\n}\nelse x2 = x1 + 1;\n}\nelse if (d == 1)\n{
+

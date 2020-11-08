@@ -1,0 +1,2 @@
+if ( = = fmy - 1 ) { if ( ! periodic ) continue ; else = 0 ; } else = + 1 ;
+protected bool [ ] [ ] [ ] wave ; protected bool [ ] [ ] changes ;

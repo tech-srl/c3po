@@ -1,0 +1,95 @@
+                System.IO.FileStream _FileStream =\n                   new System.IO.FileStream(fileName, System.IO.FileMode.Create,\n                                            System.IO.FileAccess.Write);
+                var states = (object[])ar.AsyncState;
+                var onSuccess = (Action)states[1];
+                var session = new AsyncSession(remote);
+            var timer = (ProxyTimer)sender;
+                var session = (AsyncSession<ProxyTimer>)ar.AsyncState;
+            var timer = (ServerTimer)sender;
+            if (_closed) return;\n            try\n            {\n                var session = (AsyncSession<ServerTimer>)ar.AsyncState;
+            if (_closed) return;\n            try\n            {\n                var session = (AsyncSession)ar.AsyncState;
+            {\n                Close();\n            }
+                _runningPort = this.GetFreePort();
+            if (string.IsNullOrEmpty(password))
+            if (string.IsNullOrEmpty(server))
+            if (string.IsNullOrEmpty(server))
+            if (string.IsNullOrEmpty(remarks))
+                if (String.IsNullOrEmpty(controller.GetConfigurationCopy().pacUrl))
+                if (!String.IsNullOrEmpty(controller.GetConfigurationCopy().pacUrl))
+                string temppath = Utils.GetTempPath();\n                LogFile = Path.Combine(temppath, "shadowsocks.log");
+                _totalWrite += bytesRead;\n                var session = (AsyncSession<bool>) ar.AsyncState;
+                Console.WriteLine(e.Message);
+                MenuItem item = new MenuItem(I18N.GetString(strategy.Name));
+                if (buffer == firstPackge)\n                {\n                    _bufferDataIndex = index;\n                }\n                else\n                {\n                    Array.Copy(firstPackge, index, _lineBuffer, 0, length);\n                }
+            else\n            {\n                FileManager.UncompressFile(PAC_FILE, Resources.proxy_pac_txt);\n                return PAC_FILE;\n            }
+                return Utils.UnGzip(Resources.proxy_pac_txt);
+                lines = new string[] { dataLine };
+            this._server = server;
+                var states = (object[])ar.AsyncState;
+                var onSuccess = (Action)states[1];
+            var timer = (ProxyTimer)sender;
+                var session = (AsyncSession<ProxyTimer>)ar.AsyncState;
+            var timer = (ServerTimer)sender;
+            if (_closed) return;\n            try\n            {\n                var session = (AsyncSession<ServerTimer>)ar.AsyncState;
+            if (_closed) return;\n            try\n            {\n                var session = (AsyncSession)ar.AsyncState;
+            this.encryptor = EncryptorFactory.GetEncryptor(server.method, server.password, server.auth, false);
+            this._firstPacket = firstPacket;\n            this._firstPacketLength = length;\n            this.HandshakeReceive();\n            this.lastActivity = DateTime.Now;
+                this.Close();
+                    this.Close();\n                }\n            }\n            catch (Exception e)\n            {\n                Logging.LogUsefulException(e);\n                this.Close();
+                        this.Close();\n                    }\n                }\n            }\n            catch (Exception e)\n            {\n                Logging.LogUsefulException(e);\n                this.Close();
+                this.Close();
+                    this.lastActivity = DateTime.Now;
+                        strategy.UpdateLastRead(this.server);
+                        strategy.UpdateLastWrite(this.server);
+            lock (_encryptionLock)\n            {\n                lock (_decryptionLock)\n                {\n                    _encryptor = EncryptorFactory.GetEncryptor(server.method, server.password, server.auth, false);\n                }\n            }
+                                new AsyncCallback(ResponseCallback), null);
+            _connection.BeginSend(response, 0, response.Length, SocketFlags.None, new AsyncCallback(ReadAll), true);
+                    _connection.BeginReceive(_connetionRecvBuffer, 0, RecvSize, SocketFlags.None, new AsyncCallback(ReadAll), null);
+                        _connection.BeginReceive(_connetionRecvBuffer, 0, RecvSize, SocketFlags.None, new AsyncCallback(ReadAll), null);
+                remote.BeginConnectDest(destEndPoint, new AsyncCallback(ConnectCallback), new AsyncSession<ServerTimer>(session, connectTimer));
+            this.MyCancelButton.Margin = new System.Windows.Forms.Padding(3, 3, 0, 0);
+            PackageLoss = responseRecords.Count(response => response != null)/(float) responseRecords.Count();
+            _allTextBoxes = HotKeys.GetChildControls<TextBox>(this.tableLayoutPanel1);
+            this.Text = I18N.GetString("Edit Hotkeys...");
+            this.Close();
+            try\n            {\n                Socket listener = (Socket)ar.AsyncState;
+            try\n            {\n                Socket listener = (Socket)ar.AsyncState;
+                            Sodium.ss_onetimeauth(auth, buf, headLen, _encryptIV, ivLen, _key, keyLen);
+            this.Font = SystemFonts.MessageBoxFont;
+            this.ServersListBox.Dock = DockStyle.Fill;\n            this.tableLayoutPanel5.Dock = DockStyle.Fill;\n            this.PerformLayout();
+            this.Icon = Icon.FromHandle(Resources.ssw128.GetHicon());
+            toolTip1.SetToolTip(this.PortableModeCheckBox, I18N.GetString("Restart required"));
+            this.Text = I18N.GetString("Edit Servers");
+                        if (readProxyServer != null && readProxyServer.Equals("127.0.0.1:" + config.localPort.ToString()))\n                            registry.SetValue("ProxyServer", "");
+                    if (global)\n                    {\n                        registry.SetValue("ProxyServer", "");\n                    }
+                this.method = parts[0];\n                this.password = parts[1];
+                Console.WriteLine(e.Message);
+                            Color flyBlue = Color.FromArgb(192, 192, 192);
+    using RawStatistics = Dictionary<string, List<AvailabilityStatistics.RawStatisticsData>>;\n    using Statistics = Dictionary<string, List<AvailabilityStatistics.StatisticsData>>;
+            var oldServer = _currentServer;\n            if (oldServer == null)
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);\n            this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;\n        private System.Windows.Forms.MainMenu mainMenu1;
+            this._targetPort = targetPort;
+            new Handler().Start(firstPacket, length, socket, this._targetPort);
+                    this.Close();
+                        new AsyncCallback(PipeRemoteReceiveCallback), null);
+                        new AsyncCallback(PipeConnectionReceiveCallback), null);\n                }\n                catch (Exception e)\n                {\n                    Logging.LogUsefulException(e);\n                    this.Close();
+                    this.Close();
+            MbedTLS.md5(input, (uint)input.Length, output);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);\n            this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;\n        private System.Windows.Forms.MainMenu mainMenu1;
+                if (bytesRead > 0)\n                {\n                    string text = String.Format(@"HTTP/1.1 200 OK
+            string proxy = "PROXY " + localEndPoint.Address + ":8123;";\n            //try\n            //{\n            //    string requestString = Encoding.UTF8.GetString(requestBuf);\n            //    if (requestString.IndexOf("AppleWebKit") >= 0)\n            //    {\n            //        string address = "" + localEndPoint.Address + ":" + config.GetCurrentServer().local_port;\n            //        proxy = "SOCKS5 " + address + "; SOCKS " + address + ";";\n            //    }\n            //}\n            //catch (Exception e)\n            //{\n            //    Console.WriteLine(e);\n            //}\n            return proxy;
+                if (e is SocketException)\n                {\n                    SocketException se = (SocketException)e;
+                bool parsed = IPAddress.TryParse(config.server, out ipAddress);
+                    IPHostEntry ipHostInfo = Dns.GetHostEntry(config.server);
+                new Task(() => availabilityStatistics.UpdateLatency(server, (int)latency.TotalMilliseconds)).Start();
+                new Task(() => availabilityStatistics.UpdateInboundCounter(server, n)).Start();
+                new Task(() => availabilityStatistics.UpdateOutboundCounter(server, n)).Start();
+        public extern static void ss_sha1_hmac_ex(byte[] key, uint keylen,
+                controller.GetCurrentStrategy().UpdateLatency(this.server, latency);
+                RegistryKey reg_HKCU = Registry.CurrentUser;\n                RegistryKey reg_ThemesPersonalize = reg_HKCU.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Themes\Personalize", false);
+                retval = RAS.RasEnumEntries(null, null, names, ref lpSize, out lpNames);
+                        lock (locker)\n                        {\n                            encryptor = new PolarSSLEncryptor("aes-256-cfb", "barfoo!");\n                            decryptor = new PolarSSLEncryptor("aes-256-cfb", "barfoo!");\n                        }
+            polipoRunner.Start(_config.GetCurrentServer());\n            local = new Local(_config.GetCurrentServer());
+                                if (!int.TryParse(locs[1], out _targetPort))\n                                {\n                                    throw new Exception("Bad http header: " + line);\n                                }\n                            }\n                            else\n                            {\n                                _targetPort = 80;
+                                if (!int.TryParse(locs[1], out _targetPort))\n                                {\n                                    throw new Exception("Bad http header: " + line);\n                                }\n                            }\n                            else\n                            {\n                                _targetPort = 80;
