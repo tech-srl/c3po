@@ -275,3 +275,27 @@ In all these files, each sample corresponds to a specific line. I.e, the first l
 You can find an example of these files in `samples_50_example`.
 
 Lastly, a file that contains the train-val-test splits need to be provided. You can see an example - `splits_50.json`.
+
+## Citations
+If you want to cite this work, please use this bibtex entry:
+```
+
+@article{10.1145/3428283,
+author = {Brody, Shaked and Alon, Uri and Yahav, Eran},
+title = {A Structural Model for Contextual Code Changes},
+year = {2020},
+issue_date = {November 2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {4},
+number = {OOPSLA},
+url = {https://doi.org/10.1145/3428283},
+doi = {10.1145/3428283},
+abstract = {We address the problem of predicting edit completions based on a learned model that was trained on past edits. Given a code snippet that is partially edited, our goal is to predict a completion of the edit for the rest of the snippet. We refer to this task as the EditCompletion task and present a novel approach for tackling it. The main idea is to directly represent structural edits. This allows us to model the likelihood of the edit itself, rather than learning the likelihood of the edited code. We represent an edit operation as a path in the program’s Abstract Syntax Tree (AST), originating from the source of the edit to the target of the edit. Using this representation, we present a powerful and lightweight neural model for the EditCompletion task. We conduct a thorough evaluation, comparing our approach to a variety of representation and modeling approaches that are driven by multiple strong models such as LSTMs, Transformers, and neural CRFs. Our experiments show that our model achieves a 28% relative gain over state-of-the-art sequential models and 2\texttimes{} higher accuracy than syntactic models that learn to generate the edited code, as opposed to modeling the edits directly. Our code, dataset, and trained models are publicly available at https://github.com/tech-srl/c3po/ .},
+journal = {Proc. ACM Program. Lang.},
+month = nov,
+articleno = {215},
+numpages = {28},
+keywords = {Machine Learning, Neural Models of Code, Edit Completions}
+}
+```
