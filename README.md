@@ -1,6 +1,13 @@
 # A Structural Model for Contextual Code Changes
+This is an official implementation of the model described in:
 
-This repository contains the PyTorch implementation of the neural network _**C3PO**_, along with all the required code and data to reproduce our results.
+[Shaked Brody](http://www.cs.technion.ac.il/people/shakedbr/), [Uri Alon](http://urialon.cswp.cs.technion.ac.il), [Eran Yahav](http://www.cs.technion.ac.il/~yahave/), "A Structural Model for Contextual Code Changes" [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3428283)
+
+Appeard in **OOPSLA'2020**
+
+
+
+This is a PyTorch implementation of the neural network _**C3PO**_.
 Our code can be easily extended to other programming languages since the PyTorch network is agnostic to the input programming language (see [Extending to other languages](#Extending-to-other-languages)).
 We also provide a with C# extractor for preprocessing the (raw) input code and explain how to implement such an extractor for other input programming languages.
 
@@ -276,8 +283,8 @@ You can find an example of these files in `samples_50_example`.
 
 Lastly, a file that contains the train-val-test splits need to be provided. You can see an example - `splits_50.json`.
 
-## Citations
-If you want to cite this work, please use this bibtex entry:
+## Citation
+[A Structural Model for Contextual Code Changes](https://dl.acm.org/doi/pdf/10.1145/3428283)
 ```
 
 @article{10.1145/3428283,
