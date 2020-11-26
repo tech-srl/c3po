@@ -286,23 +286,14 @@ Lastly, a file that contains the train-val-test splits need to be provided. You 
 ## Citation
 [A Structural Model for Contextual Code Changes](https://dl.acm.org/doi/pdf/10.1145/3428283)
 ```
-
-@article{10.1145/3428283,
-author = {Brody, Shaked and Alon, Uri and Yahav, Eran},
-title = {A Structural Model for Contextual Code Changes},
-year = {2020},
-issue_date = {November 2020},
-publisher = {Association for Computing Machinery},
-address = {New York, NY, USA},
-volume = {4},
-number = {OOPSLA},
-url = {https://doi.org/10.1145/3428283},
-doi = {10.1145/3428283},
-abstract = {We address the problem of predicting edit completions based on a learned model that was trained on past edits. Given a code snippet that is partially edited, our goal is to predict a completion of the edit for the rest of the snippet. We refer to this task as the EditCompletion task and present a novel approach for tackling it. The main idea is to directly represent structural edits. This allows us to model the likelihood of the edit itself, rather than learning the likelihood of the edited code. We represent an edit operation as a path in the program’s Abstract Syntax Tree (AST), originating from the source of the edit to the target of the edit. Using this representation, we present a powerful and lightweight neural model for the EditCompletion task. We conduct a thorough evaluation, comparing our approach to a variety of representation and modeling approaches that are driven by multiple strong models such as LSTMs, Transformers, and neural CRFs. Our experiments show that our model achieves a 28% relative gain over state-of-the-art sequential models and 2\texttimes{} higher accuracy than syntactic models that learn to generate the edited code, as opposed to modeling the edits directly. Our code, dataset, and trained models are publicly available at https://github.com/tech-srl/c3po/ .},
-journal = {Proc. ACM Program. Lang.},
-month = nov,
-articleno = {215},
-numpages = {28},
-keywords = {Machine Learning, Neural Models of Code, Edit Completions}
+@article{brody2020structural,
+  title={A structural model for contextual code changes},
+  author={Brody, Shaked and Alon, Uri and Yahav, Eran},
+  journal={Proceedings of the ACM on Programming Languages},
+  volume={4},
+  number={OOPSLA},
+  pages={1--28},
+  year={2020},
+  publisher={ACM New York, NY, USA}
 }
 ```
