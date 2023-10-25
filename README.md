@@ -1,7 +1,7 @@
 # A Structural Model for Contextual Code Changes
 This is an official implementation of the model described in:
 
-[Shaked Brody](http://www.cs.technion.ac.il/people/shakedbr/), [Uri Alon](http://urialon.cswp.cs.technion.ac.il), [Eran Yahav](http://www.cs.technion.ac.il/~yahave/), "A Structural Model for Contextual Code Changes" [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3428283)
+[Shaked Brody](http://www.cs.technion.ac.il/people/shakedbr/), [Uri Alon](http://urialon.ml), [Eran Yahav](http://www.cs.technion.ac.il/~yahave/), "A Structural Model for Contextual Code Changes" [[PDF]](https://dl.acm.org/doi/pdf/10.1145/3428283)
 
 Appeard in **OOPSLA'2020**
 
